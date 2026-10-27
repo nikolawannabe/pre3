@@ -10,7 +10,7 @@
 
 hero:
   eyebrow: Peninsula Pre-3 Cooperative Preschool
-  heading: A first school for little ones, and their grown-ups.
+  heading: A first school for little ones and their grown-ups.
   intro: Weekly classes in Port Angeles for children 10 months to 3½ years, with a parent, grandparent or caregiver at their side. Led by an early childhood teacher, and run by families since 1975.
   buttons:            # the first one is the main action and is drawn solid
     - label: Find a class
