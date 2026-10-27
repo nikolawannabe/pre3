@@ -37,6 +37,18 @@ families age out when their children turn 3½, there are new openings every year
 carry the work from year to year. No experience needed. If you'd like to help,
 [email us](mailto:peninsulaprethree@gmail.com).
 
+## Board Member Positions
+
+We currently have the following board member positions available for the upcoming year:
+
+- **Vice-Chair**: Supports the Chair in managing board operations and oversees specific initiatives
+- **Treasurer**: Manages the co-op's financial records, budget, and financial reporting
+- **Fundraising Chair**: Leads our fundraising efforts including grant writing, community events, and donor relations
+
+These positions are great opportunities to contribute to the co-op while gaining experience in cooperative governance. Board members typically serve 1-2 year terms, with the option to renew.
+
+If you're interested in serving on the board or have questions about these roles, please [email us](mailto:peninsulaprethree@gmail.com).
+
 ## Staying in touch
 
 - **Text message groups:** each class has one, run by the teacher, for reminders and changes.

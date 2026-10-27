@@ -20,7 +20,6 @@ Every gift helps, and Pre-3 is a 501(c)(3) nonprofit, so your donation may be ta
 
 Fundraisers are also a great way for families to get to know each other outside of class. Look for us at:
 
-- The **Kids Zone at Jammin' in the Park**
 - The **refreshment table at the North Olympic Discovery Marathon**
 - **Restaurant takeovers**, where part of your bill supports Pre-3
 - **Bake sales and candy sales**
