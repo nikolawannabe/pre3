@@ -1,0 +1,9 @@
+{{- /* Home page: one quote from a Pre-3 parent. Takes data/home.yaml "quote" ({ text, who }). */ -}}
+{{- with . }}
+<section class="home-quote">
+  <figure class="home-quote__figure">
+    <blockquote class="home-quote__text"><p>“{{ .text }}”</p></blockquote>
+    <figcaption class="home-quote__who">{{ .who }}</figcaption>
+  </figure>
+</section>
+{{- end }}

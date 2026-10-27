@@ -1,0 +1,6 @@
+{{- /* Home page: the closing call to register. Takes data/home.yaml "join" ({ heading, text, buttons }). */ -}}
+<section class="home-join">
+  <h2 class="home-join__heading">{{ .heading }}</h2>
+  <p class="home-join__text">{{ .text }}</p>
+  {{ partial "buttons.html" .buttons }}
+</section>

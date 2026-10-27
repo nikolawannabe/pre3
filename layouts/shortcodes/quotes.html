@@ -1,0 +1,4 @@
+{{- /* Quotes from Pre-3 parents, from data/people.yaml "quotes". Usage: {{< quotes >}} */ -}}
+{{- range site.Data.people.quotes }}
+<blockquote><p>“{{ .text }}”</p><p>— A Pre-3 parent</p></blockquote>
+{{- end }}

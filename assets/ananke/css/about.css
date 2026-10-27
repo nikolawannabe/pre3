@@ -1,0 +1,17 @@
+/* People cards ({{< people >}}) and the contact card ({{< contact >}}), used on /about/ and /classes/. */
+.people { display: grid; gap: 1.5rem; margin: 1rem 0; }
+.person { display: flex; gap: 1.25rem; align-items: flex-start; }
+.person__photo, .person__initials { flex: none; width: 6rem; height: 6rem; border-radius: 50%; }
+.person__photo { object-fit: cover; }
+.person__initials { display: flex; align-items: center; justify-content: center; background-color: var(--brand-fern); color: var(--brand-fern-deep); font-family: var(--font-heading); font-weight: 700; font-size: 1.6rem; }
+.person:nth-child(2n) .person__initials { background-color: var(--brand-lupine); color: var(--brand-lupine-deep); }
+.page-content .person__name { margin: 0; }
+.person__role { margin: 0.1rem 0 0.4rem; color: var(--ink-muted); font-weight: 600; }
+.person__bio { margin: 0; }
+
+.contact-card { display: flex; flex-wrap: wrap; gap: 1rem 2.5rem; margin: 1rem 0; padding: 1.25rem 1.5rem; border-radius: 1rem; background-color: #fff; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08); }
+.contact-card__part { flex: 1 1 16rem; }
+.page-content .contact-card h3 { margin-top: 0; }
+.contact-card p { margin: 0.5rem 0; }
+.contact-card__fine { font-size: 0.9rem; color: var(--ink-muted); }
+.contact-card__social { display: inline-flex; align-items: center; gap: 0.5rem; }

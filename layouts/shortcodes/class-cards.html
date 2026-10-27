@@ -1,0 +1,6 @@
+{{- /* The four classes as cards (partials/class-card.html), from data/classes.yaml. Usage: {{< class-cards >}} */ -}}
+<div class="class-cards">
+  {{- range site.Data.classes.classes }}
+    {{ partial "class-card.html" . }}
+  {{- end }}
+</div>

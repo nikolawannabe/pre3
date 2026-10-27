@@ -1,0 +1,41 @@
+/* The site footer (partials/site-footer.html): Fern pastel with dark text. */
+.site-footer {
+  margin-top: 3rem;
+  padding: 2rem 1rem 1rem;
+  background-color: var(--brand-fern);
+  color: var(--ink);
+}
+.site-footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem 4rem;
+  max-width: 60rem;
+  margin: 0 auto;
+}
+.site-footer__about { flex: 2 1 20rem; }
+.site-footer__column { flex: 1 1 12rem; }
+
+.site-footer__brand { display: flex; align-items: center; gap: 0.75rem; color: var(--ink); text-decoration: none; }
+.site-footer__name { font-family: var(--font-heading); font-weight: 700; font-size: 1.125rem; }
+.site-footer__text { margin: 0.75rem 0 0; line-height: 1.5; }
+.site-footer a:not(.site-footer__button) { color: var(--brand-fern-deep); }
+
+.site-footer__heading { margin: 0 0 0.5rem; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.06em; }
+
+.site-footer__actions { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+.site-footer__button {
+  display: inline-block;
+  padding: 0.6rem 1.1rem;
+  border: 2px solid var(--brand-fern-deep);
+  border-radius: 999px;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--brand-fern-deep);
+  text-decoration: none;
+}
+.site-footer__button--primary { background-color: var(--brand-fern-deep); color: #fff; }
+
+.site-footer__links { margin: 0; padding: 0; list-style: none; line-height: 1.9; }
+.site-footer__social-link { display: inline-flex; align-items: center; gap: 0.5rem; }
+
+.site-footer__bottom { max-width: 60rem; margin: 2rem auto 0; font-size: 0.875rem; color: var(--ink-muted); }

@@ -1,0 +1,12 @@
+{{- /*
+  A photo from assets/images/home/, cropped to fill its box. Takes a dict: photo ({ file, alt, focus } as
+  described in data/home.yaml), class (CSS class for the <img>), width and height (the crop size in pixels).
+  Prints nothing if the file is missing, so callers can fall back to something else.
+*/ -}}
+{{- with .photo }}{{ with .file }}
+  {{- with resources.Get (print "images/home/" .) }}
+    {{- $img := .Fill (printf "%dx%d webp q80 Smart" $.width $.height) }}
+    <img class="{{ $.class }}" src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}"
+         alt="{{ $.photo.alt }}"{{ with $.photo.focus }} style="{{ printf "object-position: %s" . | safeCSS }}"{{ end }}>
+  {{- end }}
+{{- end }}{{ end -}}

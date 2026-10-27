@@ -1,0 +1,56 @@
+{{- /*
+  The site footer on every page. Text and link columns from data/footer.yaml; contact details, Jovial,
+  Facebook and the address from data/contact.yaml. Styles: assets/ananke/css/footer.css.
+*/ -}}
+{{- $f := site.Data.footer -}}
+{{- $c := site.Data.contact -}}
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <section class="site-footer__about" aria-label="About {{ site.Title }}">
+      <a class="site-footer__brand" href="{{ site.Home.RelPermalink }}">
+        {{- with site.Params.site_logo }}
+          <img class="site-footer__logo" src="{{ urls.RelURL . }}" alt="" width="72" height="67">
+        {{- end }}
+        <span class="site-footer__name">{{ site.Title }}</span>
+      </a>
+      <p class="site-footer__text">{{ $f.tagline }}</p>
+      <p class="site-footer__text">{{ $f.nonprofit }}</p>
+      <div class="site-footer__actions">
+        <a class="site-footer__button site-footer__button--primary" href="{{ $c.jovial.register }}">Register on Jovial</a>
+        <a class="site-footer__button" href="{{ $c.jovial.family_portal }}">Family Portal</a>
+      </div>
+    </section>
+
+    {{- range $f.columns }}
+      <nav class="site-footer__column" aria-label="{{ .heading }}">
+        <h2 class="site-footer__heading">{{ .heading }}</h2>
+        <ul class="site-footer__links">
+          {{- range .links }}
+            <li><a href="{{ .url }}">{{ .label }}</a></li>
+          {{- end }}
+        </ul>
+      </nav>
+    {{- end }}
+
+    <section class="site-footer__column" aria-label="Contact us">
+      <h2 class="site-footer__heading">Contact us</h2>
+      <p class="site-footer__text">
+        {{ $c.phone_label }}<br>
+        <a href="mailto:{{ $c.email }}">{{ replace $c.email "@" "@<wbr>" | safeHTML }}</a>{{/* <wbr>: wrap after the @ in narrow columns */}}<br>
+        <a href="tel:{{ replaceRE `[^0-9]` "" $c.phone }}">{{ $c.phone }}</a>
+      </p>
+      <p class="site-footer__text">
+        Classes meet at<br>
+        <a href="{{ $c.location.map_url }}">{{ $c.location.name }}, {{ $c.location.street }}<span class="visually-hidden"> (map)</span></a><br>
+        {{ $c.location.town }}
+      </p>
+      <p class="site-footer__text">
+        <a class="site-footer__social-link" href="{{ $c.facebook }}">
+          {{- partial "social-icon.html" "facebook" }}
+          <span>Pre-3 on Facebook</span>
+        </a>
+      </p>
+    </section>
+  </div>
+  <p class="site-footer__bottom">© {{ now.Year }} {{ site.Title }} · Mail: {{ delimit $c.mailing_address ", " }}</p>
+</footer>

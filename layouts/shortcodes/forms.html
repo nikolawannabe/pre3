@@ -1,0 +1,6 @@
+{{- /* The forms every family needs before the first class, from data/classes.yaml "forms". Usage: {{< forms >}} */ -}}
+<ul class="forms__list">
+  {{- range site.Data.classes.forms }}
+    <li><a href="{{ .url }}">{{ .label }}</a></li>
+  {{- end }}
+</ul>

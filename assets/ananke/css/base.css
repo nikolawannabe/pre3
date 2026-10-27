@@ -1,0 +1,64 @@
+/* Site-wide type and colors: the brand fonts and the Oat page background. Variables are in brand.css. */
+body {
+  background-color: var(--brand-oat);
+  color: var(--ink);
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--ink);
+}
+
+a { color: var(--brand-glacier-deep); }
+
+:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+/* Text only screen readers see */
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap;
+}
+
+/* The content area of plain pages (_default/single.html) */
+.page-content {
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+  line-height: 1.6;
+}
+.page-content--wide { max-width: 64rem; }   /* pages with "wide: true" in front matter, like the style guide */
+
+/* Rounded buttons (partials/buttons.html). The first in a row is solid Glacier Deep, the rest outlined. */
+.buttons { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 1.25rem 0 0; }
+.button {
+  display: inline-block;
+  padding: 0.7rem 1.3rem;
+  border: 2px solid var(--brand-glacier-deep);
+  border-radius: 999px;
+  background-color: #fff;
+  color: var(--brand-glacier-deep);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  text-decoration: none;
+}
+.button:hover { text-decoration: underline; }
+.button--primary { background-color: var(--brand-glacier-deep); color: #fff; }
+
+/* Small line icons (partials/icon.html) sit on the text baseline */
+.icon { flex: none; vertical-align: middle; }
+
+/* Markdown pages: comfortable headings and lists */
+.page-content h2 { margin: 2.25rem 0 0.75rem; font-size: 1.6rem; }
+.page-content h3 { margin: 1.5rem 0 0.5rem; font-size: 1.2rem; }
+.page-content li { margin: 0.3rem 0; }
+.page-content blockquote { margin: 1.25rem 0; padding: 0.75rem 1.25rem; border-left: 0.35rem solid var(--brand-lupine-deep); border-radius: 0.5rem; background-color: var(--brand-lupine); }
+.page-content blockquote p { margin: 0.25rem 0; }
+
+/* A highlighted box inside a markdown page ({{< callout >}}) */
+.callout { margin: 1.5rem 0; padding: 1rem 1.25rem; border-radius: 1rem; background-color: var(--brand-glacier); }
+.callout > :first-child { margin-top: 0; }
+.callout > :last-child { margin-bottom: 0; }

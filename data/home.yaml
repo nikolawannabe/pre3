@@ -1,0 +1,61 @@
+# The home page's words, in order down the page (layouts/index.html, partials in layouts/partials/home/).
+# Edit the text and links here, not in the templates. Styles: assets/ananke/css/home.css.
+#
+# Photos: when there are some, put them in assets/images/home/ and list them under hero.photo (and
+# anywhere else a "photo:" is shown below). Each photo is:
+#   file:  the file name in assets/images/home/ (Hugo makes web-sized copies; the original can be big)
+#   alt:   what the photo shows, for people using screen readers
+#   focus: optional; which part to keep when it is cropped, as "x% y%" ("50% 25%" keeps the top middle)
+# Without a photo, the hero shows the logo instead.
+
+hero:
+  eyebrow: Peninsula Pre-3 Cooperative Preschool
+  heading: A first school for little ones, and their grown-ups.
+  intro: Weekly classes in Port Angeles for children 10 months to 3½ years, with a parent, grandparent or caregiver at their side. Led by an early childhood teacher, and run by families since 1975.
+  buttons:            # the first one is the main action and is drawn solid
+    - label: Find a class
+      url: /classes/
+    - label: Register on Jovial
+      url: https://www.jovial.org/peninsulacoop/hello
+  facts:              # the short line under the buttons
+    - Ages 10 months to 3½ years
+    - Port Angeles
+    - Since 1975
+  photo: {}           # e.g. { file: circle-time.jpg, alt: "Toddlers and parents singing in a circle", focus: "50% 40%" }
+
+classes:
+  heading: Four classes a week
+  intro: Each class meets once a week for two hours (90 minutes in the evening). Pick the one that fits your child's age and your week.
+  more_label: Class details, dates and registration
+  more_url: /classes/
+
+values:
+  heading: Why families choose Pre-3
+  items:
+    - title: Little ones learn together
+      icon: blocks
+      text: Sharing is hard, taking turns takes practice, and little kids have big feelings. Pre-3 is a gentle first step into playing with other children and listening to grown-ups outside the family.
+    - title: Grown-ups learn too
+      icon: talk
+      text: Each week the adults gather with a parent educator to talk about child development, everyday parenting challenges, and resources in our community.
+    - title: Run by families
+      icon: home
+      text: A cooperative is owned and run by the people who use it. Families take turns helping in the classroom, and a volunteer board of enrolled families and community members keeps it all running.
+    - title: Open to every family
+      icon: heart
+      text: We keep tuition below what classes cost to run, and make up the difference with fundraising and grants. Tuition assistance is there for families who need it.
+
+quote:
+  text: We started when my son was almost 9 months old, and now he's 2½. He's been able to grow and learn with the same group of kiddos for almost two years now!
+  who: A Pre-3 parent
+
+join:
+  heading: Come play with us
+  text: Register on Jovial to join a class, or to get on the waitlist for a full one. Questions? The Membership Coordinator is happy to help.
+  buttons:
+    - label: Register on Jovial
+      url: https://www.jovial.org/peninsulacoop/hello
+    - label: Email us
+      url: mailto:peninsulaprethree@gmail.com
+
+events_heading: Upcoming Events

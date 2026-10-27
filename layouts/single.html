@@ -1,0 +1,9 @@
+{{- /*
+  A plain page: the site header (navigation, title, description; partials/site-header.html) and the content.
+  Replaces Ananke's article layout, whose serif fonts, date line and side column a site like this doesn't need.
+*/ -}}
+{{ define "main" }}
+  <div class="page-content{{ if .Params.wide }} page-content--wide{{ end }}">
+    {{ .Content }}
+  </div>
+{{ end }}

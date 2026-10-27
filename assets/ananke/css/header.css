@@ -1,0 +1,53 @@
+/* The navigation bar and page title (partials/site-navigation.html, partials/site-header.html). */
+
+/* Glacier pastel bar with dark text; the black logo sits on it directly (14:1). */
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--brand-glacier);
+}
+
+.site-nav__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--ink);
+  text-decoration: none;
+}
+.site-nav__logo { width: 56px; height: auto; }
+.site-nav__name {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;   /* like the lettering in the logo */
+}
+
+.site-nav__menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.site-nav__link {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--ink);
+  text-decoration: none;
+}
+.site-nav__link:hover { text-decoration: underline; }
+
+.page-header {
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 2rem 1rem 1rem;
+  text-align: center;
+}
+.page-header__title { margin: 0; font-size: 2.25rem; font-weight: 700; }
+.page-header__description { margin: 0.75rem 0 0; font-size: 1.125rem; color: var(--ink-muted); }

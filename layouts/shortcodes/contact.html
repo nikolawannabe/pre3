@@ -1,0 +1,19 @@
+{{- /* Where classes meet, how to get in, and how to reach us, from data/contact.yaml. Usage: {{< contact >}} */ -}}
+{{- $c := site.Data.contact -}}
+<div class="contact-card">
+  <div class="contact-card__part">
+    <h3>Where classes meet</h3>
+    <p>{{ $c.location.name }}<br>{{ $c.location.street }}<br>{{ $c.location.town }}<br>
+       <a href="{{ $c.location.map_url }}">Map of {{ $c.location.name }}</a></p>
+    <p>{{ $c.location.directions }}</p>
+    <p class="contact-card__fine">Pre-3 rents its classroom and playground from the church; we're not part of it.</p>
+  </div>
+  <div class="contact-card__part">
+    <h3>Get in touch</h3>
+    <p>{{ $c.phone_label }}<br>
+       <a href="mailto:{{ $c.email }}">{{ $c.email }}</a><br>
+       <a href="tel:{{ replaceRE `[^0-9]` "" $c.phone }}">{{ $c.phone }}</a></p>
+    <p>Mail:<br>{{ delimit $c.mailing_address "<br>" | safeHTML }}</p>
+    <p><a class="contact-card__social" href="{{ $c.facebook }}">{{ partial "social-icon.html" "facebook" }}<span>Follow Pre-3 on Facebook</span></a></p>
+  </div>
+</div>

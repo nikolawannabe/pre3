@@ -1,0 +1,12 @@
+{{- /*
+  One class as a card in its brand color: name, day and time, ages, and a waitlist badge when it's full.
+  Takes a class from data/classes.yaml. Used on the home page, /classes/ and the style guide.
+  Styles: assets/ananke/css/classes.css.
+*/ -}}
+<article class="class-card" style="{{ printf "--pastel: var(--brand-%s); --deep: var(--brand-%s-deep)" .color_var .color_var | safeCSS }}">
+  <h3 class="class-card__name">{{ .name }}</h3>
+  <p class="class-card__when">{{ .day }}s, {{ .start }}–{{ .end }}</p>
+  <p class="class-card__ages">{{ .age_label }}{{ if .mixed_age }} · mixed ages{{ end }}</p>
+  {{- with .note }}<p class="class-card__note">{{ . }}</p>{{ end }}
+  {{- if .waitlist }}<p class="class-card__status">Waitlist</p>{{ end }}
+</article>

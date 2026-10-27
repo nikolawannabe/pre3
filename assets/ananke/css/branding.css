@@ -1,0 +1,59 @@
+/* The style guide page (/branding/, content/branding.html and the brand-* shortcodes). */
+.brand-section { margin: 2.5rem 0; }
+.brand-section h2 { font-size: 1.6rem; margin: 0 0 0.75rem; }
+.branding code { font-size: 0.9em; }
+
+/* Contrast lines: a small mark in front tells pass / large text only / fail at a glance */
+.brand-contrasts { margin: 0.5rem 0 0; padding: 0; list-style: none; font-size: 0.9rem; }
+.brand-contrast::before { display: inline-block; width: 1.4em; font-weight: 700; }
+.brand-contrast--pass::before { content: "✓"; color: var(--brand-fern-deep); }
+.brand-contrast--large::before { content: "~"; color: var(--brand-salmonberry-deep); }
+.brand-contrast--fail::before { content: "✗"; color: #b00020; }
+
+/* Color pairs. Each card sets --pastel and --deep. */
+.brand-colors { display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 1.25rem; }
+.brand-color { overflow: hidden; border-radius: 1rem; background-color: #fff; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1); }
+.brand-color__swatches { display: flex; }
+.brand-color__swatch { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; min-height: 6rem; padding: 0.6rem 0.75rem; font-size: 0.85rem; }
+.brand-color__swatch span { font-weight: 700; }
+.brand-color__swatch--pastel { background-color: var(--pastel); color: var(--ink); }
+.brand-color__swatch--deep { background-color: var(--deep); color: #fff; }
+.brand-color__body { padding: 0.75rem 1rem 1rem; }
+.brand-color__body p { margin: 0.25rem 0; }
+.brand-color__name { margin: 0; font-size: 1.2rem; }
+.brand-color__role { font-family: var(--font-body); font-size: 0.85rem; font-weight: 600; color: var(--ink-muted); }
+.brand-color__sample { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; margin: 0.75rem 0 0.25rem; padding: 0.75rem; border-radius: 0.6rem; background-color: var(--pastel); }
+.brand-color__sample-text { color: var(--deep); font-weight: 700; text-decoration: underline; }
+.brand-color__sample-button { padding: 0.4rem 0.9rem; border-radius: 999px; background-color: var(--deep); color: #fff; font-family: var(--font-heading); font-weight: 600; font-size: 0.9rem; }
+
+.brand-neutrals { display: flex; flex-wrap: wrap; gap: 1.25rem; }
+.brand-neutral { display: flex; align-items: center; gap: 0.75rem; }
+.brand-neutral p { margin: 0; font-size: 0.9rem; }
+.brand-neutral__swatch { width: 3.5rem; height: 3.5rem; border-radius: 0.6rem; border: 1px solid rgba(0, 0, 0, 0.15); }
+
+/* Fonts */
+.brand-fonts { display: grid; grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); gap: 1.25rem; }
+.brand-font { padding: 1rem 1.25rem; border-radius: 1rem; background-color: #fff; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1); }
+.brand-font p { margin: 0.35rem 0; }
+.brand-font__role { font-size: 0.85rem; font-weight: 600; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+.brand-font__sample { font-size: 1.6rem; line-height: 1.3; font-weight: 700; }
+.brand-font--font-body .brand-font__sample { font-size: 1.25rem; font-weight: 400; }   /* body text is shown at reading weight */
+.brand-font__note { font-size: 0.9rem; color: var(--ink-muted); }
+
+/* Logos */
+.brand-logos { display: flex; flex-wrap: wrap; gap: 1.25rem; }
+.brand-logo { flex: 1 1 16rem; max-width: 22rem; margin: 0; padding: 1.25rem; border-radius: 1rem; background-color: #fff; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1); text-align: center; }
+.brand-logo img { width: 100%; max-width: 14rem; height: auto; }
+.brand-logo figcaption { margin-top: 0.75rem; font-size: 0.9rem; }
+.brand-logo--dark { background-color: var(--brand-glacier-deep); color: #fff; }
+.brand-logo--dark a { color: #fff; }
+
+/* Terms. Each card sets --term and --term-tint. */
+.brand-terms { display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 1.25rem; }
+.brand-term { overflow: hidden; border-radius: 1rem; background-color: var(--term-tint); }
+.brand-term__badge { display: flex; align-items: center; gap: 0.6rem; padding: 0.75rem 1rem; background-color: var(--term); color: #fff; font-family: var(--font-heading); font-weight: 700; font-size: 1.1rem; }
+.brand-term__body { padding: 0.75rem 1rem 1rem; }
+.brand-term__meta { margin: 0.2rem 0; font-size: 0.9rem; }
+
+/* Stickers and merch, until there are some */
+.brand-placeholder { padding: 1.25rem; border: 2px dashed var(--ink-muted); border-radius: 1rem; color: var(--ink-muted); }

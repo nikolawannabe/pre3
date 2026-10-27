@@ -1,0 +1,13 @@
+{{- /*
+  The events (content/events/) that haven't ended when the site is built, soonest first. Takes nothing useful;
+  pass anything. Events that end between builds are hidden in the browser by js/hide-past.js.
+*/ -}}
+{{- $today := now.Format "2006-01-02" -}}
+{{- $upcoming := slice -}}
+{{- range sort (where site.RegularPages "Section" "events") "Date" "asc" -}}
+  {{- $last := .Params.endDate | default .Date -}}
+  {{- if ge ((time $last).Format "2006-01-02") $today -}}
+    {{- $upcoming = $upcoming | append . -}}
+  {{- end -}}
+{{- end -}}
+{{- return $upcoming -}}

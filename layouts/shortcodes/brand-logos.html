@@ -1,0 +1,19 @@
+{{- /*
+  Style guide section: the logo files, each on a background it suits, with a download link.
+  Usage: {{< brand-logos >}}. Logos come from data/brand.yaml.
+*/ -}}
+<section class="brand-section">
+  <h2>Logo</h2>
+  <p>
+    The logo is black line art on a transparent background. Keep it black on light backgrounds and
+    white on dark ones; don't recolor it in the brand colors.
+  </p>
+  <div class="brand-logos">
+    {{- range site.Data.brand.logos }}
+      <figure class="brand-logo{{ if .dark }} brand-logo--dark{{ end }}">
+        <img src="{{ .file | relURL }}" alt="Peninsula Pre-3 Cooperative Preschool logo, {{ .name }}" loading="lazy">
+        <figcaption><strong>{{ .name }}</strong><br>{{ .use }}<br><a href="{{ .file | relURL }}" download>Download PNG</a></figcaption>
+      </figure>
+    {{- end }}
+  </div>
+</section>

@@ -1,0 +1,16 @@
+{{- /*
+  When an event happens, as words: "Thursday, September 3, 5:30–7:00 pm", or a date range for a multi-day
+  event. Takes the event page. Times come from "date" and the optional "endTime" (e.g. "7:00 pm") front matter;
+  "allDay: true" leaves the time off.
+*/ -}}
+{{- $start := .Date -}}
+{{- $text := $start.Format "Monday, January 2" -}}
+{{- with .Params.endDate -}}
+  {{- $text = printf "%s – %s" $text ((time .).Format "Monday, January 2") -}}
+{{- else -}}
+  {{- if not $.Params.allDay -}}
+    {{- $text = printf "%s, %s" $text ($start.Format "3:04 pm") -}}
+    {{- with $.Params.endTime }}{{ $text = printf "%s–%s" $text . }}{{ end -}}
+  {{- end -}}
+{{- end -}}
+{{- $text -}}

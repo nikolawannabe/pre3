@@ -1,0 +1,11 @@
+{{- /*
+  A row of rounded buttons. Takes a list of { label, url }; the first is the main action and is drawn solid.
+  Styles: .buttons in assets/ananke/css/base.css.
+*/ -}}
+{{- with . }}
+<div class="buttons">
+  {{- range $i, $b := . }}
+    <a class="button{{ if eq $i 0 }} button--primary{{ end }}" href="{{ $b.url }}">{{ $b.label }}</a>
+  {{- end }}
+</div>
+{{- end }}

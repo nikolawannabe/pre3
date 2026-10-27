@@ -1,0 +1,14 @@
+{{- /*
+  The term (from data/terms.yaml) a date falls in, or nil if none does or the term dates aren't set yet.
+  Takes a time.Time. Compares calendar days only, so an event at 7pm on a term's last day still counts.
+*/ -}}
+{{- $found := false -}}
+{{- $day := .Format "2006-01-02" -}}
+{{- range site.Data.terms.terms -}}
+  {{- if and .start .end (not $found) -}}
+    {{- if and (ge $day ((time .start).Format "2006-01-02")) (le $day ((time .end).Format "2006-01-02")) -}}
+      {{- $found = . -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $found -}}

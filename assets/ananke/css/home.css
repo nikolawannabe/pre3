@@ -1,0 +1,42 @@
+/* The home page (layouts/index.html, partials/home/). */
+.home { max-width: 64rem; margin: 0 auto; padding: 0 1rem; }
+.home-section { margin: 3.5rem 0; }
+.home-section__heading { margin: 0 0 0.5rem; font-size: 1.75rem; }
+.home-section__intro { margin: 0 0 1.25rem; max-width: 42rem; }
+.home-section__more { margin: 1rem 0 0; font-weight: 700; }
+
+/* Hero: text beside the photo (or the logo), stacked on phones */
+.home-hero { display: flex; flex-wrap: wrap; align-items: center; gap: 2rem; padding: 2.5rem 0 1rem; }
+.home-hero__text { flex: 3 1 20rem; }
+.home-hero__art { flex: 2 1 16rem; display: flex; justify-content: center; }
+.home-hero__eyebrow { margin: 0; font-family: var(--font-heading); font-weight: 600; font-size: 0.9rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--brand-glacier-deep); }
+.home-hero__heading { margin: 0.5rem 0 0; font-size: 2.25rem; line-height: 1.15; }
+@media (min-width: 48em) { .home-hero__heading { font-size: 3rem; } }
+.home-hero__intro { margin: 1rem 0 0; font-size: 1.15rem; line-height: 1.6; }
+.home-hero__facts { display: flex; flex-wrap: wrap; gap: 0.4rem 1.25rem; margin: 1.25rem 0 0; padding: 0; list-style: none; color: var(--ink-muted); font-weight: 600; }
+.home-hero__facts li + li::before { content: "·"; margin-right: 1.25rem; margin-left: -0.6rem; }
+.home-hero__photo { width: 100%; max-width: 24rem; height: auto; aspect-ratio: 1; object-fit: cover; border-radius: 50%; }
+.home-hero__logo-circle { display: flex; align-items: center; justify-content: center; width: 22rem; max-width: 80vw; aspect-ratio: 1; border-radius: 50%; background-color: var(--brand-glacier); }
+.home-hero__logo { width: 72%; height: auto; }
+
+/* Values: four short points; the icon circles cycle through the brand colors */
+.home-values__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); gap: 1.5rem; margin-top: 1.25rem; }
+.home-value__icon { display: inline-flex; align-items: center; justify-content: center; width: 3rem; height: 3rem; border-radius: 50%; background-color: var(--brand-glacier); color: var(--brand-glacier-deep); }
+.home-value:nth-child(4n+2) .home-value__icon { background-color: var(--brand-fern); color: var(--brand-fern-deep); }
+.home-value:nth-child(4n+3) .home-value__icon { background-color: var(--brand-lupine); color: var(--brand-lupine-deep); }
+.home-value:nth-child(4n+4) .home-value__icon { background-color: var(--brand-salmonberry); color: var(--brand-salmonberry-deep); }
+.home-value__title { margin: 0.75rem 0 0.25rem; font-size: 1.15rem; }
+.home-value__text { margin: 0; line-height: 1.55; }
+
+/* Quote */
+.home-quote { margin: 3.5rem 0; padding: 2rem 1.5rem; border-radius: 1.5rem; background-color: var(--brand-lupine); text-align: center; }
+.home-quote__figure { max-width: 42rem; margin: 0 auto; }
+.home-quote__text { margin: 0; }
+.home-quote__text p { margin: 0; font-family: var(--font-heading); font-weight: 500; font-size: 1.3rem; line-height: 1.5; }
+.home-quote__who { margin-top: 0.75rem; color: var(--brand-lupine-deep); font-weight: 700; }
+
+/* Join */
+.home-join { margin: 3.5rem 0 0; padding: 2rem 1.5rem; border-radius: 1.5rem; background-color: var(--brand-glacier); text-align: center; }
+.home-join__heading { margin: 0; font-size: 1.75rem; }
+.home-join__text { max-width: 36rem; margin: 0.75rem auto 0; }
+.home-join .buttons { justify-content: center; }

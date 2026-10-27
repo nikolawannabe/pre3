@@ -1,0 +1,16 @@
+{{- /*
+  Home page: why families choose Pre-3, as four short points with icons. Takes data/home.yaml "values".
+  The icon circles cycle through the four brand colors, set in home.css.
+*/ -}}
+<section class="home-section home-values">
+  <h2 class="home-section__heading">{{ .heading }}</h2>
+  <div class="home-values__grid">
+    {{- range .items }}
+      <article class="home-value">
+        <span class="home-value__icon">{{ partial "icon.html" .icon }}</span>
+        <h3 class="home-value__title">{{ .title }}</h3>
+        <p class="home-value__text">{{ .text }}</p>
+      </article>
+    {{- end }}
+  </div>
+</section>

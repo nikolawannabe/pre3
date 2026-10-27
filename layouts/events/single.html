@@ -1,0 +1,17 @@
+{{- /*
+  One event: when and where in a box tinted with its term's color, then the description.
+  Styles: assets/ananke/css/events.css.
+*/ -}}
+{{ define "main" }}
+  {{- $term := partial "term-for-date.html" .Date }}
+  <div class="page-content">
+    <div class="event-facts"{{ with $term }} style="{{ printf "--term: %s; --term-tint: %s" .color .tint | safeCSS }}"{{ end }}>
+      <p>{{ partial "icon.html" "calendar" }}<span>{{ partial "event-when.html" . }}</span></p>
+      {{- with .Params.location }}
+        <p>{{ partial "icon.html" "pin" }}<span>{{ . }}</span></p>
+      {{- end }}
+    </div>
+    {{ .Content }}
+    <p><a href="{{ "events/" | relURL }}">← All events</a></p>
+  </div>
+{{ end }}

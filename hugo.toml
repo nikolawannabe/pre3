@@ -1,0 +1,47 @@
+baseURL = 'https://example.org/'   # TODO: the Pre-3 domain, once DNS is set up
+languageCode = 'en-us'
+title = 'Peninsula Pre-3 Cooperative Preschool'
+theme = 'ananke'
+
+# Don't generate /tags/, /categories/ and their term pages
+disableKinds = ["taxonomy", "term"]
+
+# The main menu. /branding/ (the style guide) is reachable but not listed.
+[[menu.main]]
+  name = "Classes"
+  url = "/classes/"
+  weight = 1
+[[menu.main]]
+  name = "For Families"
+  url = "/families/"
+  weight = 2
+[[menu.main]]
+  name = "Events"
+  url = "/events/"
+  weight = 3
+[[menu.main]]
+  name = "About"
+  url = "/about/"
+  weight = 4
+[[menu.main]]
+  name = "Support Us"
+  url = "/support/"
+  weight = 5
+
+[params]
+body_classes = "pre3"   # replaces the theme default (avenir bg-light-yellow); fonts and colors are in base.css
+description = "A parent-run cooperative preschool for children 10 months to 3½ years and their grown-ups."
+site_logo = "images/logo/pre3-logo-400.png"
+favicon = "images/logo/favicon.png"
+# Extra stylesheets from assets/ananke/css/, bundled into the theme's main.css in this order
+# (brand.css first: it defines the brand color and font variables the others use).
+custom_css = ["brand.css", "base.css", "header.css", "footer.css", "home.css", "classes.css", "events.css", "about.css", "branding.css"]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[security]
+  # Allows all content media types, including HTML files
+  allowContent = ['.*']

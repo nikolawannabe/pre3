@@ -1,0 +1,29 @@
+{{- /*
+  A group of people from data/people.yaml, with a photo or their initials and a short bio.
+  Usage: {{< people "teachers" >}} or {{< people "parent_educators" >}}. Styles: about.css.
+*/ -}}
+{{- with index site.Data.people (.Get 0) }}
+<h2>{{ .heading }}</h2>
+{{- with .people }}
+<div class="people">
+  {{- range . }}
+    <article class="person">
+      {{- $photo := "" }}
+      {{- with .photo }}{{ with resources.Get (print "images/people/" .) }}{{ $photo = .Fill "240x240 webp q80 Smart" }}{{ end }}{{ end }}
+      {{- with $photo }}
+        <img class="person__photo" src="{{ .RelPermalink }}" width="120" height="120" alt="">
+      {{- else }}
+        <span class="person__initials" aria-hidden="true">{{ range split .name " " }}{{ substr . 0 1 }}{{ end }}</span>
+      {{- end }}
+      <div>
+        <h3 class="person__name">{{ .name }}</h3>
+        <p class="person__role">{{ .role }}</p>
+        <p class="person__bio">{{ .bio }}</p>
+      </div>
+    </article>
+  {{- end }}
+</div>
+{{- else }}
+<p>{{ .empty_note }}</p>
+{{- end }}
+{{- end }}

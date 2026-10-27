@@ -1,0 +1,4 @@
+{{- /* A highlighted box around some markdown. Usage: {{< callout >}} text {{< /callout >}}. Styles: base.css. */ -}}
+<div class="callout">
+{{ .Inner | .Page.RenderString (dict "display" "block") }}
+</div>

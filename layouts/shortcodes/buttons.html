@@ -1,0 +1,13 @@
+{{- /*
+  A row of buttons in a markdown page. Usage, with label|url pairs (the first is the main action):
+    {{< buttons "Register on Jovial|https://www.jovial.org/peninsulacoop/hello" "Email us|mailto:..." >}}
+  Use "jovial" or "family-portal" as the url to link to the addresses in data/contact.yaml.
+*/ -}}
+{{- $named := dict "jovial" site.Data.contact.jovial.register "family-portal" site.Data.contact.jovial.family_portal "email" (print "mailto:" site.Data.contact.email) -}}
+{{- $buttons := slice -}}
+{{- range .Params -}}
+  {{- $parts := split . "|" -}}
+  {{- $url := index $parts 1 -}}
+  {{- $buttons = $buttons | append (dict "label" (index $parts 0) "url" (index $named $url | default $url)) -}}
+{{- end -}}
+{{ partial "buttons.html" $buttons }}

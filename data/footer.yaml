@@ -1,0 +1,15 @@
+# What the site footer shows (layouts/partials/site-footer.html). Edit the text and links here, not in the
+# template. Contact details, the Jovial and Facebook links and the address come from data/contact.yaml.
+
+tagline: A parent-run cooperative preschool for children 10 months to 3½ years and their grown-ups, in Port Angeles since 1975.
+nonprofit: Peninsula Pre-3 Cooperative is a 501(c)(3) nonprofit, run by a volunteer board of enrolled families and interested community members.
+
+# Link columns, in order
+columns:
+  - heading: Explore
+    links:
+      - { label: Classes and registration, url: /classes/ }
+      - { label: For families, url: /families/ }
+      - { label: Events, url: /events/ }
+      - { label: About us, url: /about/ }
+      - { label: Support Pre-3, url: /support/ }

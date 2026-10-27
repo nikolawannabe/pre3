@@ -1,0 +1,49 @@
+# The Pre-3 school year: four terms. Update the dates once a year.
+# start / end: the first and last class days (YYYY-MM-DD). Leave empty until they're set; the site then
+#   shows "dates coming soon" and events in that term use the brand Glacier color.
+# color: deep shade (white text sits on it; it is also used for small text on white).
+# tint: the term's pastel, for backgrounds behind dark text.
+# icon: seasonal icon from layouts/partials/term-icons.html (maple, snowflake, flower, sun).
+# parent_ed: whether the weekly parent education discussion runs that term.
+year: "2026–2027"
+
+terms:
+  - id: fall
+    name: Fall Term
+    start: 2026-09-08
+    end: ""            # TODO: last day of Fall classes
+    color: "#983f15"
+    tint: "#f6d6c3"
+    icon: maple
+    parent_ed: true
+  - id: winter
+    name: Winter Term
+    start: ""          # TODO
+    end: ""
+    color: "#2b5d87"
+    tint: "#d3e5f2"
+    icon: snowflake
+    parent_ed: true
+  - id: spring
+    name: Spring Term
+    start: ""          # TODO
+    end: ""
+    color: "#3a7034"
+    tint: "#d5e9cd"
+    icon: flower
+    parent_ed: true
+  - id: summer
+    name: Summer Term
+    start: ""          # TODO
+    end: ""
+    color: "#875800"
+    tint: "#fbe5ac"
+    icon: sun
+    parent_ed: false
+    note: No parent educator in summer.
+
+# Dates families need to know, in order. Shown on /classes/ under the terms.
+dates:
+  - { date: 2026-08-08, label: Registration opens for Fall classes }
+  - { date: 2026-09-03, label: Fall Family Welcome Night }
+  - { date: 2026-09-08, label: First day of Fall classes }

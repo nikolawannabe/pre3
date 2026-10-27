@@ -1,0 +1,31 @@
+{{- /*
+  Style guide section: term colors and seasonal icons. Usage: {{< brand-terms >}}
+  Terms come from data/terms.yaml, icons from partials/term-icons.html.
+*/ -}}
+{{ partial "term-icons.html" . }}
+<section class="brand-section">
+  <h2>Term Colors and Icons</h2>
+  <p>
+    Each of the four terms has its own color and seasonal icon, set in <code>data/terms.yaml</code>.
+    They will color the term calendar, the class schedule for each term, and the date badges of events in
+    that term. Like the brand colors, each term has a deep shade (for badges with white text) and a pastel tint.
+  </p>
+  <div class="brand-terms">
+    {{- range site.Data.terms.terms }}
+      <article class="brand-term" style="{{ printf "--term: %s; --term-tint: %s" .color .tint | safeCSS }}">
+        <div class="brand-term__badge">
+          <svg width="28" height="28" aria-hidden="true"><use href="#ico-term-{{ .icon }}"/></svg>
+          <span>{{ .name }}</span>
+        </div>
+        <div class="brand-term__body">
+          <p class="brand-term__meta">Deep <code>{{ .color }}</code> · Tint <code>{{ .tint }}</code> · Icon: {{ .icon }}</p>
+          <p class="brand-term__meta">{{ if .parent_ed }}Weekly parent education.{{ else }}{{ .note }}{{ end }}</p>
+          <ul class="brand-contrasts">
+            {{ partial "contrast-line.html" (dict "label" "White on Deep" "a" "#ffffff" "b" .color) }}
+            {{ partial "contrast-line.html" (dict "label" "Deep on the tint" "a" .color "b" .tint) }}
+          </ul>
+        </div>
+      </article>
+    {{- end }}
+  </div>
+</section>

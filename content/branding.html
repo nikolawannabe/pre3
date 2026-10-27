@@ -1,0 +1,25 @@
+---
+title: "Style Guide"
+description: "Colors, fonts and logos for Peninsula Pre-3 Cooperative Preschool"
+date: 2026-10-26
+draft: false
+wide: true   # the color and term cards need the room
+# Internal style guide: reachable at /branding/, but not listed or in the sitemap
+build:
+  list: never
+sitemap:
+  disable: true
+---
+<!-- Each section is drawn from data/brand.yaml, data/terms.yaml and data/classes.yaml by the brand-* shortcodes. -->
+<div class="branding">
+  {{< brand-logos >}}
+  {{< brand-colors >}}
+  {{< brand-fonts >}}
+  {{< brand-terms >}}
+  {{< brand-classes >}}
+
+  <section class="brand-section">
+    <h2>Event Stickers</h2>
+    <p class="brand-placeholder">Pre-3's own event stickers will go here, once they're chosen.</p>
+  </section>
+</div>

@@ -1,0 +1,28 @@
+{{- /*
+  The events page: upcoming events soonest first, then past events (newest first) folded away.
+  Cards come from partials/event-card.html. Styles: assets/ananke/css/events.css.
+*/ -}}
+{{ define "main" }}
+  {{- $upcoming := partial "upcoming-events.html" . }}
+  {{- $past := complement $upcoming (where site.RegularPages "Section" "events") }}
+  <div class="page-content">
+    {{ .Content }}
+    {{- with $upcoming }}
+      <div class="event-cards" data-empty-message="No upcoming events right now. Check back soon, or follow us on Facebook.">
+        {{- range . }}{{ partial "event-card.html" . }}{{ end }}
+      </div>
+    {{- else }}
+      <p class="events-empty">No upcoming events right now. Check back soon, or <a href="{{ site.Data.contact.facebook }}">follow us on Facebook</a>.</p>
+    {{- end }}
+
+    {{- with $past }}
+      <details class="events-past">
+        <summary>Past events</summary>
+        <div class="event-cards">
+          {{- range sort . "Date" "desc" }}{{ partial "event-card.html" . }}{{ end }}
+        </div>
+      </details>
+    {{- end }}
+    {{ partial "hide-past-script.html" }}
+  </div>
+{{ end }}

@@ -1,0 +1,36 @@
+/*
+  Pre-3 brand colors and fonts (see the style guide at /branding/), as CSS variables for every page.
+  Loaded by the Ananke theme through `custom_css` in hugo.toml, before the stylesheets that use them.
+
+  Each brand color comes as a pair: a soft pastel for backgrounds, and a deep shade of the same hue for
+  text, icons and buttons. The pastels are too light for text (WCAG AA needs 4.5:1), so never put text
+  in a pastel color; put dark text on it instead. Contrast numbers are computed on /branding/.
+*/
+:root {
+  /* Pastels, named for the Olympic Peninsula scene in the logo */
+  --brand-glacier: #bcdcec;          /* Primary: the water and the sky over the mountains */
+  --brand-fern: #cde3c3;             /* Secondary: the forest floor */
+  --brand-lupine: #d8cdee;           /* Accent: mountain wildflowers */
+  --brand-salmonberry: #f6cdb9;      /* Accent: the berry the bears are after */
+  --brand-oat: #fbf6ec;              /* Page background: warm off-white */
+
+  /* Deep shades, for text, icons and button fills on white, Oat, or their own pastel.
+     White text on each of them passes AA too. */
+  --brand-glacier-deep: #1b5a78;
+  --brand-fern-deep: #2f6630;
+  --brand-lupine-deep: #5a4691;
+  --brand-salmonberry-deep: #9a3f1c;
+
+  /* Text. The logo is black; body text is a warm near-black, a little softer on the eye. */
+  --ink: #2b2724;                    /* body text and headings */
+  --ink-muted: #5c544c;              /* secondary lines */
+  --logo-black: #000000;             /* the logo artwork itself */
+
+  /* Keyboard focus ring, everywhere */
+  --focus-ring: var(--brand-glacier-deep);
+
+  /* Fonts. Montserrat is the free near-match for the logo lettering (a geometric sans like Gotham).
+     Nunito is a soft, rounded body face that is easy to read at small sizes. Loaded in partials/site-scripts.html. */
+  --font-heading: 'Montserrat', 'Gotham', 'Helvetica Neue', Arial, sans-serif;
+  --font-body: 'Nunito', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+}

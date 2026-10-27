@@ -1,0 +1,16 @@
+{{- /*
+  Style guide section: the color each class uses, drawn as a sample class card. Usage: {{< brand-classes >}}
+  Classes come from data/classes.yaml and are drawn by partials/class-card.html, the same card the site uses.
+*/ -}}
+<section class="brand-section">
+  <h2>Class Colors</h2>
+  <p>
+    Each of the four classes uses one of the brand color pairs, so families can spot their class on the
+    schedule and calendar. Set it with <code>color_var</code> in <code>data/classes.yaml</code>.
+  </p>
+  <div class="class-cards">
+    {{- range site.Data.classes.classes }}
+      {{ partial "class-card.html" . }}
+    {{- end }}
+  </div>
+</section>

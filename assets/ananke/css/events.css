@@ -1,0 +1,22 @@
+/* Event cards (partials/event-card.html), the events list and single event pages.
+   A card in a term sets --term and --term-tint; outside a term it falls back to Glacier. */
+.event-cards { display: grid; gap: 1rem; }
+.event-card { display: flex; gap: 1rem; align-items: flex-start; padding: 1rem; border-radius: 1rem; background-color: #fff; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08); }
+.event-card__badge { flex: none; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 4rem; height: 4rem; margin: 0; border-radius: 0.8rem; background-color: var(--term, var(--brand-glacier-deep)); color: #fff; font-family: var(--font-heading); line-height: 1; }
+.event-card__month { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; }
+.event-card__day { font-size: 1.6rem; font-weight: 700; }
+.event-card__body p { margin: 0.2rem 0 0; }
+.event-card__title { margin: 0; font-size: 1.15rem; }
+.event-card__title a { color: var(--ink); }
+.event-card__when { font-weight: 700; color: var(--term, var(--brand-glacier-deep)); }
+.event-card__where, .event-card__summary { color: var(--ink-muted); }
+
+.events-empty { padding: 1rem 1.25rem; border-radius: 1rem; background-color: #fff; color: var(--ink-muted); }
+.events-past { margin-top: 2.5rem; }
+.events-past summary { cursor: pointer; font-family: var(--font-heading); font-weight: 700; }
+.events-past .event-cards { margin-top: 1rem; }
+
+/* A single event page: when and where, above the description */
+.event-facts { display: grid; gap: 0.5rem; margin: 0 0 1.5rem; padding: 1rem 1.25rem; border-radius: 1rem; background-color: var(--term-tint, var(--brand-glacier)); }
+.event-facts p { display: flex; align-items: center; gap: 0.6rem; margin: 0; }
+.event-facts .icon { color: var(--term, var(--brand-glacier-deep)); }

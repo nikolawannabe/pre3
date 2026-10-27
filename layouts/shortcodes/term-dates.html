@@ -1,0 +1,28 @@
+{{- /*
+  The four terms with their dates (or "dates coming soon"), then the key dates of the year.
+  From data/terms.yaml. Usage: {{< term-dates >}}. Styles: classes.css.
+*/ -}}
+{{- $terms := site.Data.terms -}}
+{{ partial "term-icons.html" . }}
+<ul class="term-list">
+  {{- range $terms.terms }}
+    <li class="term-list__item" style="{{ printf "--term: %s; --term-tint: %s" .color .tint | safeCSS }}">
+      <p class="term-list__name"><svg width="22" height="22" aria-hidden="true"><use href="#ico-term-{{ .icon }}"/></svg>{{ .name }}</p>
+      <p class="term-list__dates">
+        {{- if and .start .end }}{{ (time .start).Format "January 2" }} – {{ (time .end).Format "January 2, 2006" }}
+        {{- else if .start }}Starts {{ (time .start).Format "January 2, 2006" }}
+        {{- else }}Dates coming soon{{ end -}}
+      </p>
+      <p class="term-list__note">{{ if .parent_ed }}Weekly parent education{{ else }}{{ .note }}{{ end }}</p>
+    </li>
+  {{- end }}
+</ul>
+{{- with $terms.dates }}
+<h3>Key dates for {{ $terms.year }}</h3>
+<ul class="key-dates">
+  {{- range . }}
+    {{- $d := time .date }}
+    <li><time datetime="{{ $d.Format "2006-01-02" }}">{{ $d.Format "Monday, January 2" }}</time>: {{ .label }}</li>
+  {{- end }}
+</ul>
+{{- end }}

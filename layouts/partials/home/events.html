@@ -1,0 +1,17 @@
+{{- /*
+  Home page: the next few events, soonest first. Takes the section heading. Shows nothing when no events
+  are coming up, so the page doesn't advertise an empty list.
+*/ -}}
+{{- $upcoming := partial "upcoming-events.html" . -}}
+{{- with first 3 $upcoming }}
+<section class="home-section">
+  <h2 class="home-section__heading">{{ $ }}</h2>
+  <div class="event-cards" data-empty-message="No upcoming events right now. Check back soon, or follow us on Facebook.">
+    {{- range . }}
+      {{ partial "event-card.html" . }}
+    {{- end }}
+  </div>
+  <p class="home-section__more"><a href="{{ "events/" | relURL }}">All events →</a></p>
+  {{ partial "hide-past-script.html" }}
+</section>
+{{- end }}

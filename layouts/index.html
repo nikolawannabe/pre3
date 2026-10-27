@@ -1,0 +1,23 @@
+{{- /*
+  The home page. Its header is just the navigation bar: the hero section carries the page's heading (h1).
+  The words come from data/home.yaml, the classes and sample morning from data/classes.yaml.
+  Section partials are in layouts/partials/home/. Styles: assets/ananke/css/home.css.
+*/ -}}
+{{ define "header" }}
+  <header>{{ partials.Include "site-navigation.html" . }}</header>
+{{ end }}
+
+{{ define "main" }}
+  {{ $home := site.Data.home }}
+  <div class="home">
+    {{ partial "home/hero.html" $home.hero }}
+    {{ partial "home/classes.html" $home.classes }}
+    {{ partial "home/values.html" $home.values }}
+    <section class="home-section">
+      {{ partial "sample-day.html" site.Data.classes.sample_day }}
+    </section>
+    {{ partial "home/quote.html" $home.quote }}
+    {{ partial "home/events.html" $home.events_heading }}
+    {{ partial "home/join.html" $home.join }}
+  </div>
+{{ end }}

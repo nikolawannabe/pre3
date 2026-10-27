@@ -1,0 +1,14 @@
+{{- /*
+  Home page: the four classes as cards, with a link to /classes/. Takes data/home.yaml "classes";
+  the classes themselves come from data/classes.yaml.
+*/ -}}
+<section class="home-section">
+  <h2 class="home-section__heading">{{ .heading }}</h2>
+  <p class="home-section__intro">{{ .intro }} {{ site.Data.classes.age_note }}</p>
+  <div class="class-cards">
+    {{- range site.Data.classes.classes }}
+      {{ partial "class-card.html" . }}
+    {{- end }}
+  </div>
+  <p class="home-section__more"><a href="{{ .more_url }}">{{ .more_label }} →</a></p>
+</section>

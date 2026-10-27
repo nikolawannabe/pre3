@@ -1,0 +1,22 @@
+{{- /*
+  One event as a card: a date badge in its term's color (Glacier outside a term or before the term dates are set),
+  the title linking to the event page, and when and where. Takes the event page.
+  Hidden in the browser once the event is over (data-hide-after, read by js/hide-past.js).
+  Styles: assets/ananke/css/events.css.
+*/ -}}
+{{- $start := .Date -}}
+{{- $last := time (.Params.endDate | default .Date) -}}
+{{- $term := partial "term-for-date.html" $start -}}
+<article class="event-card"{{ with $term }} style="{{ printf "--term: %s; --term-tint: %s" .color .tint | safeCSS }}"{{ end }}
+         data-hide-after="{{ $last.Format "2006-01-02" }}">
+  <p class="event-card__badge" aria-hidden="true">
+    <span class="event-card__month">{{ $start.Format "Jan" }}</span>
+    <span class="event-card__day">{{ $start.Format "2" }}</span>
+  </p>
+  <div class="event-card__body">
+    <h3 class="event-card__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+    <p class="event-card__when">{{ partial "event-when.html" . }}</p>
+    {{- with .Params.location }}<p class="event-card__where">{{ . }}</p>{{ end }}
+    {{- with .Description }}<p class="event-card__summary">{{ . }}</p>{{ end }}
+  </div>
+</article>

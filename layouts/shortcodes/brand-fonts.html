@@ -1,0 +1,17 @@
+{{- /*
+  Style guide section: the brand fonts, each with a sample in that font. Usage: {{< brand-fonts >}}
+  Fonts come from data/brand.yaml; the font variables are in assets/ananke/css/brand.css.
+*/ -}}
+<section class="brand-section">
+  <h2>Fonts</h2>
+  <div class="brand-fonts">
+    {{- range site.Data.brand.fonts }}
+      <article class="brand-font brand-font--{{ .var }}">
+        <p class="brand-font__role">{{ .role }}</p>
+        <p class="brand-font__sample" style="{{ printf "font-family: var(--%s)" .var | safeCSS }}">{{ .sample }}</p>
+        <p><strong>{{ .name }}</strong> · <a href="{{ .url }}">View {{ .name }} on Google Fonts</a></p>
+        <p class="brand-font__note">{{ .note }}</p>
+      </article>
+    {{- end }}
+  </div>
+</section>

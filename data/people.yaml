@@ -1,0 +1,24 @@
+# The people families meet at Pre-3, shown on /about/ ({{< people >}}). From the co-op's Google Site, October 2026.
+# photo: optional, a file in assets/images/people/ (shown as a circle); without one, the person's initials show.
+
+teachers:
+  heading: Our teachers
+  people:
+    - name: Tegan Glaude
+      role: Children's teacher
+      bio: Tegan came to Pre-3 as a parent in 2015 and stayed through 2022 with all three of her children, so she knows firsthand how much it helps with the ups and downs of early parenting. She studied Biology and the Program on the Environment at UW Seattle, and loves exploring the Peninsula's forests and beaches with her family.
+    - name: Shelby Simmons
+      role: Children's teacher
+      bio: Shelby is a certified elementary teacher who has taught since 2016, in East Wenatchee and Port Angeles. She joined the co-op as a parent with her son before joining the teaching team. Her favorite part of teaching is celebrating each child's growth.
+
+# Parent educators lead the weekly grown-ups' discussion in Fall, Winter and Spring. New parent educators
+# are being hired; list them here once they are.
+parent_educators:
+  heading: Parent educators
+  people: []
+  empty_note: We're welcoming new parent educators soon. Check back to meet them.
+
+# Quotes from Pre-3 parents (the home page shows one of its own, in data/home.yaml)
+quotes:
+  - text: My cooperative experience has been nothing but positive. My child and I have made new friends, and it feels great to be a working part of such an important program.
+  - text: My son loves Pre-3. This fall will be his third year in the program. He enjoys the songs, crafts, and of course playing with friends. We've met great people through Pre-3 as well.

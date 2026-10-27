@@ -1,0 +1,50 @@
+# The brand palette as shown on the style guide (/branding/). The color values themselves live in
+# assets/ananke/css/brand.css (one source of truth); "var" names the variable, without the leading "--brand-".
+# Each color is a pastel (backgrounds) with a deep shade of the same hue (text, icons, buttons).
+colors:
+  - name: Glacier
+    var: glacier
+    role: Primary
+    use: The navigation bar, links, and the main buttons.
+  - name: Fern
+    var: fern
+    role: Secondary
+    use: The footer, and the second color in illustrations.
+  - name: Lupine
+    var: lupine
+    role: Accent
+    use: Highlights, callouts and badges.
+  - name: Salmonberry
+    var: salmonberry
+    role: Accent
+    use: Highlights, callouts and badges. Use sparingly; it is the warmest color.
+
+# Single colors with no pastel/deep pair. "var" is the full variable name.
+neutrals:
+  - { name: Oat, var: brand-oat, role: Page background }
+  - { name: Ink, var: ink, role: Body text and headings }
+  - { name: Ink Muted, var: ink-muted, role: Secondary text }
+  - { name: Logo Black, var: logo-black, role: The logo artwork }
+
+fonts:
+  - role: Headings, the navigation bar and buttons
+    name: Montserrat
+    url: https://fonts.google.com/specimen/Montserrat
+    var: font-heading
+    sample: Peninsula Pre-3 Cooperative Preschool
+    note: The logo lettering looks like Gotham; Montserrat is the free Google font closest to it. Bold (700) for headings, Semibold (600) for buttons.
+  - role: Body text
+    name: Nunito
+    url: https://fonts.google.com/specimen/Nunito
+    var: font-body
+    sample: Little kids have big feelings. Sharing is hard, and taking turns takes practice.
+    note: A soft, rounded sans-serif that suits young families and stays easy to read at small sizes.
+
+logos:
+  - file: images/logo/pre3-logo-black.png
+    name: Full logo, black
+    use: On white, Oat, or any pastel.
+  - file: images/logo/pre3-logo-white.png
+    name: Full logo, white
+    use: On the deep shades or photos.
+    dark: true

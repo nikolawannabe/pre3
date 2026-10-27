@@ -1,0 +1,24 @@
+# How to reach Pre-3, and the links families use most. One place for these, so the footer, the classes page
+# and the about page all agree. From the co-op's Google Site (sites.google.com/view/pre3coop), October 2026.
+
+email: peninsulaprethree@gmail.com
+phone: "(360) 207-5663"
+phone_label: Membership Coordinator       # who answers the phone and email
+
+mailing_address:
+  - P.O. Box 876
+  - Port Angeles, WA 98362
+
+facebook: https://www.facebook.com/peninsulapre3
+
+jovial:
+  register: https://www.jovial.org/peninsulacoop/hello   # registration (new and returning families)
+  family_portal: https://www.jovial.org/peninsulacoop/family   # for registered families
+
+# Where classes meet. Pre-3 rents the space; it is not part of the church ("unaffiliated").
+location:
+  name: First Baptist Church
+  street: 5th and Laurel
+  town: Port Angeles, WA 98362
+  map_url: https://www.google.com/maps/search/?api=1&query=First+Baptist+Church+5th+and+Laurel+Port+Angeles+WA
+  directions: Park in the lot on 5th Street, and come in the main entrance on the north side of the building, off the alley.

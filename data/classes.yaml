@@ -1,0 +1,80 @@
+# The four Pre-3 classes and what a class is like. Every class meets once a week at First Baptist Church
+# in Port Angeles (data/contact.yaml). Shown on the home page, /classes/ and the style guide.
+#
+# Each class:
+#   ages: in months, so the site can compare them; age_label is how they are written for families.
+#   color_var: the brand color pair the class uses (assets/ananke/css/brand.css), e.g. lupine →
+#     --brand-lupine (pastel card) and --brand-lupine-deep (edge and badges).
+#   waitlist: true while the class is full. Families can still register on Jovial to join the waitlist.
+
+age_note: Ages are your child's age in September.
+classes_per_term: 10        # each class meets once a week, 10 times a term
+
+classes:
+  - id: tuesday
+    name: Tuesday Class
+    day: Tuesday
+    start: "9:30"
+    end: "11:30 am"
+    ages: { from: 10, to: 24 }
+    age_label: 10 months – 24 months
+    color_var: lupine
+    waitlist: false
+  - id: wednesday
+    name: Wednesday Class
+    day: Wednesday
+    start: "9:30"
+    end: "11:30 am"
+    ages: { from: 18, to: 42 }
+    age_label: 18 months – 3½ years
+    color_var: salmonberry
+    waitlist: true
+  - id: thursday-morning
+    name: Thursday Morning Class
+    day: Thursday
+    start: "9:30"
+    end: "11:30 am"
+    ages: { from: 10, to: 42 }
+    age_label: 10 months – 3½ years
+    mixed_age: true
+    color_var: glacier
+    waitlist: true
+  - id: thursday-evening
+    name: Thursday Evening Class
+    day: Thursday
+    start: "5:30"
+    end: "7:00 pm"
+    ages: { from: 10, to: 42 }
+    age_label: 10 months – 3½ years
+    mixed_age: true
+    color_var: fern
+    waitlist: false
+    note: Our most popular class, for families who work during the day.
+
+# A sample morning class, from the co-op's schedule page. The evening class is shorter.
+sample_day:
+  heading: A morning at Pre-3
+  intro: Every class follows a steady rhythm, so little ones know what comes next. Here is a typical morning.
+  steps:
+    - { time: "9:30", label: "Circle time and songs", icon: circle }
+    - { time: "9:50", label: "Activity time, while grown-ups take turns joining the parent discussion", icon: paint }
+    - { time: "10:30", label: "Clean up, then a dance party and the train song", icon: music }
+    - { time: "10:40", label: "Snack time", icon: snack }
+    - { time: "10:50", label: "Outdoor play", icon: outdoors }
+    - { time: "11:15", label: "Story time, closing circle and songs", icon: book }
+
+activities: [Music, Art, Social play, Dramatic play, Outdoor play, Science and sensory play, Field trips]
+
+# Fees. The 2025–26 amounts are out of date; leave tuition empty until the new amounts are set, and the
+# classes page says to ask the Membership Coordinator instead.
+fees:
+  registration: ""   # TODO: yearly, non-refundable registration fee
+  tuition: []        # TODO: e.g. - { label: "Morning classes", amount: "$___ per term" }
+  assistance_url: https://drive.google.com/file/d/1y4kv9Xak5dQBYgvxJvuG7_1FqdLMLFWY/view?usp=drive_link
+
+# Forms every family needs before the first class
+forms:
+  - label: Immunization form and exemption certificate (Washington Department of Health)
+    url: https://www.doh.wa.gov/CommunityandEnvironment/Schools/Immunization#cis
+  - label: Safety video
+    url: https://www.youtube.com/watch?v=6Y-3hSiz9Is

@@ -1,0 +1,57 @@
+{{- /*
+  Style guide section: the brand color pairs and the neutrals. Usage in content/branding.html: {{< brand-colors >}}
+  Names and uses come from data/brand.yaml; the values are read from assets/ananke/css/brand.css, so the
+  page always shows the real colors. Styles: assets/ananke/css/branding.css.
+*/ -}}
+{{- $oat := partial "brand-color.html" "brand-oat" -}}
+{{- $ink := partial "brand-color.html" "ink" -}}
+<section class="brand-section">
+  <h2>Brand Colors</h2>
+  <p>
+    There were no set colors before this site, so these are new. They are soft pastels taken from the
+    scene in the logo: water, forest, wildflowers and berries. Each color comes as a pair: the
+    <strong>pastel</strong> for backgrounds, and a <strong>deep</strong> shade of the same color for text,
+    icons and buttons. Never put text in a pastel color; it is too light to read.
+  </p>
+  <div class="brand-colors">
+    {{- range site.Data.brand.colors }}
+      {{- $pastel := partial "brand-color.html" (print "brand-" .var) }}
+      {{- $deep := partial "brand-color.html" (print "brand-" .var "-deep") }}
+      <article class="brand-color" style="{{ printf "--pastel: var(--brand-%s); --deep: var(--brand-%s-deep)" .var .var | safeCSS }}">
+        <div class="brand-color__swatches">
+          <div class="brand-color__swatch brand-color__swatch--pastel"><span>{{ .name }}</span><code>{{ $pastel }}</code></div>
+          <div class="brand-color__swatch brand-color__swatch--deep"><span>{{ .name }} Deep</span><code>{{ $deep }}</code></div>
+        </div>
+        <div class="brand-color__body">
+          <h3 class="brand-color__name">{{ .name }} <span class="brand-color__role">{{ .role }}</span></h3>
+          <p>{{ .use }}</p>
+          <div class="brand-color__sample">
+            <span class="brand-color__sample-text">A sample link</span>
+            <span class="brand-color__sample-button">Register</span>
+          </div>
+          <ul class="brand-contrasts">
+            {{ partial "contrast-line.html" (dict "label" "Ink on the pastel" "a" $ink "b" $pastel) }}
+            {{ partial "contrast-line.html" (dict "label" "Deep on the pastel" "a" $deep "b" $pastel) }}
+            {{ partial "contrast-line.html" (dict "label" "Deep on Oat" "a" $deep "b" $oat) }}
+            {{ partial "contrast-line.html" (dict "label" "White on Deep" "a" "#ffffff" "b" $deep) }}
+          </ul>
+        </div>
+      </article>
+    {{- end }}
+  </div>
+
+  <h3>Neutrals</h3>
+  <div class="brand-neutrals">
+    {{- range site.Data.brand.neutrals }}
+      {{- $hex := partial "brand-color.html" .var }}
+      <div class="brand-neutral">
+        <div class="brand-neutral__swatch" style="{{ printf "background-color: var(--%s)" .var | safeCSS }}"></div>
+        <p><strong>{{ .name }}</strong><br>{{ .role }}<br><code>{{ $hex }}</code></p>
+      </div>
+    {{- end }}
+  </div>
+  <ul class="brand-contrasts">
+    {{ partial "contrast-line.html" (dict "label" "Ink on Oat" "a" $ink "b" $oat) }}
+    {{ partial "contrast-line.html" (dict "label" "Ink Muted on Oat" "a" (partial "brand-color.html" "ink-muted") "b" $oat) }}
+  </ul>
+</section>

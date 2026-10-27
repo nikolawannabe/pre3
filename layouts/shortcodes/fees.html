@@ -1,0 +1,19 @@
+{{- /*
+  Registration fee, tuition and tuition assistance, from data/classes.yaml "fees".
+  Until the new amounts are set, it says to ask the Membership Coordinator. Usage: {{< fees >}}
+*/ -}}
+{{- $fees := site.Data.classes.fees -}}
+{{- $c := site.Data.contact -}}
+<div class="callout">
+  {{- if or $fees.registration $fees.tuition }}
+    <ul class="fees__list">
+      {{- with $fees.registration }}<li>Registration: {{ . }} per school year (non-refundable)</li>{{ end }}
+      {{- range $fees.tuition }}<li>{{ .label }}: {{ .amount }}</li>{{ end }}
+    </ul>
+  {{- else }}
+    <p>Tuition for this year is being updated. For current fees, contact our {{ $c.phone_label }} at
+      <a href="mailto:{{ $c.email }}">{{ $c.email }}</a> or <a href="tel:{{ replaceRE `[^0-9]` "" $c.phone }}">{{ $c.phone }}</a>.</p>
+  {{- end }}
+  <p><strong>Tuition assistance</strong> is available. Fill out the
+    <a href="{{ $fees.assistance_url }}">financial assistance application</a>, and let the {{ $c.phone_label }} know you've applied.</p>
+</div>

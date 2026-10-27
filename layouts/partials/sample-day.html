@@ -1,0 +1,17 @@
+{{- /*
+  "A morning at Pre-3": the sample class schedule as a row of steps with times and icons.
+  Takes data/classes.yaml "sample_day". Used on the home page and /classes/. Styles: classes.css.
+*/ -}}
+<div class="sample-day">
+  <h2 class="sample-day__heading">{{ .heading }}</h2>
+  <p class="sample-day__intro">{{ .intro }}</p>
+  <ol class="sample-day__steps">
+    {{- range .steps }}
+      <li class="sample-day__step">
+        <span class="sample-day__icon">{{ partial "icon.html" .icon }}</span>
+        <span class="sample-day__time">{{ .time }}</span>
+        <span class="sample-day__label">{{ .label }}</span>
+      </li>
+    {{- end }}
+  </ol>
+</div>

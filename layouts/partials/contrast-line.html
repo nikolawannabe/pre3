@@ -1,0 +1,8 @@
+{{- /*
+  One line for the style guide: the contrast between two colors and whether it passes WCAG AA.
+  Takes a dict: label (e.g. "White on Glacier deep"), a and b (colors as "#rrggbb").
+*/ -}}
+{{- $c := partial "contrast-ratio.html" (dict "a" .a "b" .b) -}}
+<li class="brand-contrast brand-contrast--{{ if eq $c.level "AA" }}pass{{ else if eq $c.level "Fails" }}fail{{ else }}large{{ end }}">
+  {{ .label }}: <strong>{{ printf "%.1f" $c.ratio }}:1</strong> ({{ $c.level }})
+</li>

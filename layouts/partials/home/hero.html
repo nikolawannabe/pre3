@@ -1,0 +1,26 @@
+{{- /*
+  Home page hero: the page heading, intro, buttons and a short fact line, beside a photo.
+  Takes data/home.yaml "hero". Until there is a photo, the logo sits in a Glacier circle instead.
+*/ -}}
+<section class="home-hero">
+  <div class="home-hero__text">
+    <p class="home-hero__eyebrow">{{ .eyebrow }}</p>
+    <h1 class="home-hero__heading">{{ .heading }}</h1>
+    <p class="home-hero__intro">{{ .intro }}</p>
+    {{ partial "buttons.html" .buttons }}
+    <ul class="home-hero__facts">
+      {{- range .facts }}<li>{{ . }}</li>{{ end }}
+    </ul>
+  </div>
+  <div class="home-hero__art">
+    {{- $photo := partial "photo.html" (dict "photo" .photo "class" "home-hero__photo" "width" 720 "height" 720) }}
+    {{- with $photo }}
+      {{ . }}
+    {{- else }}
+      <div class="home-hero__logo-circle">
+        <img class="home-hero__logo" src="{{ "images/logo/pre3-logo-black.png" | relURL }}" width="400" height="371"
+             alt="Peninsula Pre-3 Cooperative Preschool logo: a mother bear and cub walking below the mountains, with waves beneath. Established 1975.">
+      </div>
+    {{- end }}
+  </div>
+</section>

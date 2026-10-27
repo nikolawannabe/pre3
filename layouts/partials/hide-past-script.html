@@ -1,0 +1,4 @@
+{{- /* Loads js/hide-past.js once per page (the site is only rebuilt on push, so events can go stale). */ -}}
+{{- with resources.Get "js/hide-past.js" | minify | fingerprint }}
+<script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" defer></script>
+{{- end }}

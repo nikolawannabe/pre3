@@ -1,0 +1,19 @@
+{{- /*
+  The navigation bar at the top of every page: the logo and site name on the left, the main menu
+  (hugo.toml [[menu.main]]) on the right. Styles: assets/ananke/css/header.css.
+*/ -}}
+<nav class="site-nav" aria-label="Main">
+  <a class="site-nav__brand" href="{{ site.Home.RelPermalink }}">
+    {{- with site.Params.site_logo }}
+      <img class="site-nav__logo" src="{{ urls.RelURL . }}" alt="" width="56" height="52">
+    {{- end }}
+    <span class="site-nav__name">Peninsula Pre-3</span>
+  </a>
+  {{- with site.Menus.main }}
+    <ul class="site-nav__menu">
+      {{- range . }}
+        <li><a class="site-nav__link" href="{{ .URL }}">{{ .Name }}</a></li>
+      {{- end }}
+    </ul>
+  {{- end }}
+</nav>
