@@ -43,3 +43,6 @@ All generated code must be human readable and editable, and properly designed wi
 - Hugo with libsass rejects modern CSS color syntax like `rgb(0 0 0 / 0.1)`; use `rgba(0, 0, 0, 0.1)`. It also
   rejects CSS `min()`, `max()` and `clamp()` with mixed units; use max-width and media queries instead.
 - `hugo server` doesn't pick up edits to the `custom_css` stylesheets until it restarts or `hugo.toml` changes.
+- Keep `HUGO_VERSION` in `.github/workflows/hugo.yaml` the same as the local `hugo version`. Hugo versions
+  choose between the site's and the theme's templates differently (0.148 used Ananke's page layout over
+  `layouts/single.html`), so a mismatch makes the live site look different from the local one.
