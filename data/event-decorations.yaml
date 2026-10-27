@@ -1,0 +1,20 @@
+# Decorations for festive events. An event picks one with `decoration: holiday` in its front matter, and then
+# its card (home page, events list) gets a garland of icons across the top and a soft tint, and its own page
+# gets a bigger garland under the date and place. Icons are the seasonal ones in partials/term-icons.html
+# (maple, snowflake, flower, sun); colors are brand color names from brand.css, drawn in their deep shades.
+holiday:
+  icon: snowflake
+  tint: glacier
+  colors: [glacier, lupine, salmonberry, fern]
+fall:
+  icon: maple
+  tint: salmonberry
+  colors: [salmonberry, fern, salmonberry, lupine]
+spring:
+  icon: flower
+  tint: fern
+  colors: [lupine, salmonberry, fern, glacier]
+summer:
+  icon: sun
+  tint: salmonberry
+  colors: [salmonberry, glacier, fern, lupine]

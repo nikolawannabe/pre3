@@ -3,7 +3,6 @@
   From data/terms.yaml. Usage: {{< term-dates >}}. Styles: classes.css.
 */ -}}
 {{- $terms := site.Data.terms -}}
-{{ partial "term-icons.html" . }}
 <ul class="term-list">
   {{- range $terms.terms }}
     <li class="term-list__item" style="{{ printf "--term: %s; --term-tint: %s" .color .tint | safeCSS }}">

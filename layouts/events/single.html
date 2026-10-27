@@ -1,6 +1,6 @@
 {{- /*
-  One event: when and where in a box tinted with its term's color, then the description.
-  Styles: assets/ananke/css/events.css.
+  One event: when and where in a box tinted with its term's color, then its garland if it has a decoration
+  (partials/event-decoration.html), then the description. Styles: assets/ananke/css/events.css.
 */ -}}
 {{ define "main" }}
   {{- $term := partial "term-for-date.html" .Date }}
@@ -11,6 +11,7 @@
         <p>{{ partial "icon.html" "pin" }}<span>{{ . }}</span></p>
       {{- end }}
     </div>
+    {{- with partial "event-decoration.html" . }}{{ partial "garland.html" (dict "decoration" . "count" 7 "class" "garland--page") }}{{ end }}
     {{ .Content }}
     <p><a href="{{ "events/" | relURL }}">← All events</a></p>
   </div>

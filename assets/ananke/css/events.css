@@ -5,6 +5,7 @@
 .event-card__badge { flex: none; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 4rem; height: 4rem; margin: 0; border-radius: 0.8rem; background-color: var(--term, var(--brand-glacier-deep)); color: #fff; font-family: var(--font-heading); line-height: 1; }
 .event-card__month { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; }
 .event-card__day { font-size: 1.6rem; font-weight: 700; }
+.event-card__body { flex: 1 1 0; min-width: 0; }   /* shrinks beside the badge instead of wrapping under it */
 .event-card__body p { margin: 0.2rem 0 0; }
 .event-card__title { margin: 0; font-size: 1.15rem; }
 .event-card__title a { color: var(--ink); }
@@ -14,14 +15,33 @@
 /* "Tentative date" tag (partials/event-tentative.html), on cards and event pages */
 .event-tentative { display: inline-block; margin-left: 0.25rem; padding: 0.1rem 0.5rem; border-radius: 0.5rem; background-color: var(--brand-salmonberry); color: var(--ink); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; white-space: nowrap; }
 
-/* A row of snowflakes for festive pages ({{< snowflakes >}}): alternating sizes, gently bobbing up and down */
-.snowflakes { display: flex; justify-content: center; align-items: center; gap: 1rem; margin: 0.5rem 0 1.5rem; }
-.snowflakes__flake { width: 1.75rem; height: 1.75rem; }
-.snowflakes__flake:nth-child(even) { width: 1.25rem; height: 1.25rem; transform: translateY(0.6rem); }
-.snowflakes__flake--glacier { color: var(--brand-glacier-deep); }
-.snowflakes__flake--lupine { color: var(--brand-lupine-deep); }
-.snowflakes__flake--salmonberry { color: var(--brand-salmonberry-deep); }
-.snowflakes__flake--fern { color: var(--brand-fern-deep); }
+/* A decorated event (data/event-decorations.yaml): its card gets a garland across the top and fades from the
+   decoration's tint to white, so the text below sits on white. */
+.event-card--decorated { flex-wrap: wrap; row-gap: 0.75rem; background-image: linear-gradient(to bottom, var(--decoration-tint) 0, #fff 4.5rem); }
+
+/* Garland (partials/garland.html): seasonal icons in brand colors, big and small by turns, the small ones lower,
+   with sparkles between them. Icons sway and sparkles twinkle; --garland-step puts each a little out of step.
+   Placement uses `translate` so `transform` is free for the animations. */
+.garland { display: flex; align-items: center; }
+.garland--card { flex-basis: 100%; justify-content: space-between; padding: 0 0.25rem 0.4rem; font-size: 1.6rem; }
+.garland--page { justify-content: center; gap: 0.6rem; margin: 0.5rem 0 1.75rem; font-size: 1.75rem; }
+.garland__icon, .garland__sparkle { flex: none; color: var(--garland-color); }
+.garland__icon { width: 1em; height: 1em; animation: garland-sway 3.2s ease-in-out infinite; animation-delay: calc(var(--garland-step) * -0.45s); }
+.garland__icon--small { width: 0.7em; height: 0.7em; translate: 0 0.4em; }
+.garland__sparkle { width: 0.55em; height: 0.55em; translate: 0 0.2em; animation: garland-twinkle 2.2s ease-in-out infinite; animation-delay: calc(var(--garland-step) * -0.6s); }
+.garland__sparkle--high { translate: 0 -0.45em; }
+
+@keyframes garland-sway {
+  0%, 100% { transform: rotate(-12deg) scale(1); }
+  50% { transform: rotate(12deg) scale(1.12); }
+}
+@keyframes garland-twinkle {
+  0%, 100% { transform: scale(0.4) rotate(0deg); opacity: 0.35; }
+  50% { transform: scale(1.15) rotate(45deg); opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .garland__icon, .garland__sparkle { animation: none; }
+}
 
 .events-empty { padding: 1rem 1.25rem; border-radius: 1rem; background-color: #fff; color: var(--ink-muted); }
 .events-past { margin-top: 2.5rem; }

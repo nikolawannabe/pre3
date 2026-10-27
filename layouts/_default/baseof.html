@@ -69,5 +69,6 @@
       {{ block "main" . }}{{ end }}
     </main>
     {{ block "footer" . }}{{ partials.IncludeCached "site-footer.html" . }}{{ end }}
+    {{ partials.IncludeCached "term-icons.html" . }}{{/* seasonal icon symbols for term lists and event garlands */}}
   </body>
 </html>

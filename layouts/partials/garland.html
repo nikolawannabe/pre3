@@ -1,0 +1,21 @@
+{{- /*
+  A row of seasonal icons in brand colors, big and small by turns, with a twinkling sparkle between each pair.
+  The icons sway and the sparkles twinkle, each a little out of step with its neighbors (--garland-step); both
+  hold still for visitors who ask for reduced motion. Decorative, so hidden from screen readers.
+  Takes a dict: "decoration" (an entry from data/event-decorations.yaml), "count" (how many icons) and "class"
+  (garland--card or garland--page, for size and spacing). Icons from partials/term-icons.html, which
+  baseof.html includes on every page. Styles: assets/ananke/css/events.css.
+*/ -}}
+{{- $d := .decoration -}}
+{{- $colors := $d.colors -}}
+{{- $count := .count -}}
+<div class="garland {{ .class }}" aria-hidden="true">
+  {{- range $i, $_ := seq $count }}
+    {{- $color := index $colors (mod $i (len $colors)) }}
+    <svg class="garland__icon{{ if modBool $i 2 | not }} garland__icon--small{{ end }}" style="--garland-color: var(--brand-{{ $color }}-deep); --garland-step: {{ $i }}"><use href="#ico-term-{{ $d.icon }}"/></svg>
+    {{- if lt (add $i 1) $count }}
+      {{- $next := index $colors (mod (add $i 1) (len $colors)) }}
+      <svg class="garland__sparkle{{ if modBool $i 2 }} garland__sparkle--high{{ end }}" style="--garland-color: var(--brand-{{ $next }}-deep); --garland-step: {{ $i }}"><use href="#ico-sparkle"/></svg>
+    {{- end }}
+  {{- end }}
+</div>

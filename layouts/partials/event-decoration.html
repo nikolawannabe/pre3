@@ -1,0 +1,13 @@
+{{- /*
+  The decoration (data/event-decorations.yaml) an event picked with `decoration:` in its front matter, or false.
+  Takes the event page. No markup here.
+*/ -}}
+{{- $decoration := false -}}
+{{- with .Params.decoration -}}
+  {{- with index site.Data "event-decorations" . -}}
+    {{- $decoration = . -}}
+  {{- else -}}
+    {{- warnf "%s: decoration %q is not in data/event-decorations.yaml" $.File.Path . -}}
+  {{- end -}}
+{{- end -}}
+{{- return $decoration -}}
