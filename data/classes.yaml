@@ -68,8 +68,8 @@ activities: [Music, Art, Social play, Dramatic play, Outdoor play, Science and s
 # Fees. The 2025–26 amounts are out of date; leave tuition empty until the new amounts are set, and the
 # classes page says to ask the Membership Coordinator instead.
 fees:
-  registration: ""   # TODO: yearly, non-refundable registration fee
-  tuition: []        # TODO: e.g. - { label: "Morning classes", amount: "$___ per term" }
+  registration: "$40 annual registration fee"   # TODO: yearly, non-refundable registration fee
+  tuition: [{label: "Morning classes", amount: "$150"},{label: "Evening classes", amount: "$120"},]        # TODO: e.g. - { label: "Morning classes", amount: "$___ per term" }
   assistance_url: https://drive.google.com/file/d/1y4kv9Xak5dQBYgvxJvuG7_1FqdLMLFWY/view?usp=drive_link
 
 # Forms every family needs before the first class

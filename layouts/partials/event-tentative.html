@@ -1,0 +1,7 @@
+{{- /*
+  A "Tentative date" tag for an event whose date isn't settled yet ("tentative: true" in its front matter).
+  Takes the event page; prints nothing otherwise. Styles: assets/ananke/css/events.css.
+*/ -}}
+{{- if .Params.tentative -}}
+  <span class="event-tentative">Tentative date</span>
+{{- end -}}

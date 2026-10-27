@@ -2,6 +2,7 @@ baseURL = 'https://example.org/'   # TODO: the Pre-3 domain, once DNS is set up
 languageCode = 'en-us'
 title = 'Peninsula Pre-3 Cooperative Preschool'
 theme = 'ananke'
+buildFuture = true   # events are dated in the future; without this Hugo leaves them out
 
 # Don't generate /tags/, /categories/ and their term pages
 disableKinds = ["taxonomy", "term"]

@@ -11,6 +11,18 @@
 .event-card__when { font-weight: 700; color: var(--term, var(--brand-glacier-deep)); }
 .event-card__where, .event-card__summary { color: var(--ink-muted); }
 
+/* "Tentative date" tag (partials/event-tentative.html), on cards and event pages */
+.event-tentative { display: inline-block; margin-left: 0.25rem; padding: 0.1rem 0.5rem; border-radius: 0.5rem; background-color: var(--brand-salmonberry); color: var(--ink); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; white-space: nowrap; }
+
+/* A row of snowflakes for festive pages ({{< snowflakes >}}): alternating sizes, gently bobbing up and down */
+.snowflakes { display: flex; justify-content: center; align-items: center; gap: 1rem; margin: 0.5rem 0 1.5rem; }
+.snowflakes__flake { width: 1.75rem; height: 1.75rem; }
+.snowflakes__flake:nth-child(even) { width: 1.25rem; height: 1.25rem; transform: translateY(0.6rem); }
+.snowflakes__flake--glacier { color: var(--brand-glacier-deep); }
+.snowflakes__flake--lupine { color: var(--brand-lupine-deep); }
+.snowflakes__flake--salmonberry { color: var(--brand-salmonberry-deep); }
+.snowflakes__flake--fern { color: var(--brand-fern-deep); }
+
 .events-empty { padding: 1rem 1.25rem; border-radius: 1rem; background-color: #fff; color: var(--ink-muted); }
 .events-past { margin-top: 2.5rem; }
 .events-past summary { cursor: pointer; font-family: var(--font-heading); font-weight: 700; }

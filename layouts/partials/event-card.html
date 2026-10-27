@@ -15,7 +15,7 @@
   </p>
   <div class="event-card__body">
     <h3 class="event-card__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-    <p class="event-card__when">{{ partial "event-when.html" . }}</p>
+    <p class="event-card__when">{{ partial "event-when.html" . }} {{ partial "event-tentative.html" . }}</p>
     {{- with .Params.location }}<p class="event-card__where">{{ . }}</p>{{ end }}
     {{- with .Description }}<p class="event-card__summary">{{ . }}</p>{{ end }}
   </div>

@@ -6,7 +6,7 @@
   {{- $term := partial "term-for-date.html" .Date }}
   <div class="page-content">
     <div class="event-facts"{{ with $term }} style="{{ printf "--term: %s; --term-tint: %s" .color .tint | safeCSS }}"{{ end }}>
-      <p>{{ partial "icon.html" "calendar" }}<span>{{ partial "event-when.html" . }}</span></p>
+      <p>{{ partial "icon.html" "calendar" }}<span>{{ partial "event-when.html" . }} {{ partial "event-tentative.html" . }}</span></p>
       {{- with .Params.location }}
         <p>{{ partial "icon.html" "pin" }}<span>{{ . }}</span></p>
       {{- end }}

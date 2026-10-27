@@ -5,6 +5,7 @@ date: {{ .Date }}        # when it starts, e.g. 2027-03-12T17:30:00-08:00
 endTime: ""              # optional, e.g. "7:00 pm"
 # endDate: 2027-03-14    # optional, for an event over several days (then the times are left off)
 # allDay: true           # optional, to leave the time off a one-day event
+# tentative: true        # optional, tags the date "Tentative date" until it's settled
 location: ""
 description: ""          # one line, shown on the event cards
 ---

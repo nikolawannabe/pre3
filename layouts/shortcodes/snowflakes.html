@@ -1,0 +1,10 @@
+{{- /*
+  A decorative row of snowflakes in the brand's deep colors, for festive pages. Usage: {{< snowflakes >}}.
+  Hidden from screen readers. Icons from partials/term-icons.html. Styles: assets/ananke/css/events.css.
+*/ -}}
+{{ partial "term-icons.html" . }}
+<div class="snowflakes" aria-hidden="true">
+  {{- range slice "glacier" "lupine" "salmonberry" "fern" "glacier" "lupine" "salmonberry" }}
+    <svg class="snowflakes__flake snowflakes__flake--{{ . }}"><use href="#ico-term-snowflake"/></svg>
+  {{- end }}
+</div>
