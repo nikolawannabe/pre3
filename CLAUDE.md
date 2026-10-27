@@ -24,6 +24,9 @@ All generated code must be human readable and editable, and properly designed wi
 - Name values instead of using magic numbers, keep one source of truth for each value, and comment the "why".
 - Prefer small, single-purpose files with a short header comment saying what they do and what they take.
 - Use specific class names (for example `brand-term__badge`) and check the site for existing uses first.
+- **Internal links** must work when the site is served under a subpath (e.g. `nikolawannabe.github.io/pre3/`):
+  write them without a leading slash (`classes/`) and pass them through `relURL` in templates, or use
+  `{{< relref "/events" >}}` in markdown. A leading `/` skips the subpath.
 
 ## Brand and accessibility
 

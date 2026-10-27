@@ -1,5 +1,5 @@
 {{- /*
-  Home page: the four classes as cards, with a link to /classes/. Takes data/home.yaml "classes";
+  Home page: the four classes as cards, with a link to the classes page. Takes data/home.yaml "classes";
   the classes themselves come from data/classes.yaml.
 */ -}}
 <section class="home-section">
@@ -10,5 +10,5 @@
       {{ partial "class-card.html" . }}
     {{- end }}
   </div>
-  <p class="home-section__more"><a href="{{ .more_url }}">{{ .more_label }} →</a></p>
+  <p class="home-section__more"><a href="{{ .more_url | relURL }}">{{ .more_label }} →</a></p>
 </section>

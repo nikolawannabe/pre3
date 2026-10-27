@@ -14,7 +14,7 @@ hero:
   intro: Weekly classes in Port Angeles for children 10 months to 3½ years, with a parent, grandparent or caregiver at their side. Led by an early childhood teacher, and run by families since 1975.
   buttons:            # the first one is the main action and is drawn solid
     - label: Find a class
-      url: /classes/
+      url: classes/
     - label: Register on Jovial
       url: https://www.jovial.org/peninsulacoop/hello
   facts:              # the short line under the buttons
@@ -27,7 +27,7 @@ classes:
   heading: Four classes a week
   intro: Each class meets once a week for two hours (90 minutes in the evening). Pick the one that fits your child's age and your week.
   more_label: Class details, dates and registration
-  more_url: /classes/
+  more_url: classes/
 
 values:
   heading: Why families choose Pre-3

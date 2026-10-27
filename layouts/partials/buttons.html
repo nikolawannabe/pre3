@@ -5,7 +5,7 @@
 {{- with . }}
 <div class="buttons">
   {{- range $i, $b := . }}
-    <a class="button{{ if eq $i 0 }} button--primary{{ end }}" href="{{ $b.url }}">{{ $b.label }}</a>
+    <a class="button{{ if eq $i 0 }} button--primary{{ end }}" href="{{ $b.url | relURL }}">{{ $b.label }}</a>
   {{- end }}
 </div>
 {{- end }}

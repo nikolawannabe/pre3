@@ -26,7 +26,7 @@
         <h2 class="site-footer__heading">{{ .heading }}</h2>
         <ul class="site-footer__links">
           {{- range .links }}
-            <li><a href="{{ .url }}">{{ .label }}</a></li>
+            <li><a href="{{ .url | relURL }}">{{ .label }}</a></li>
           {{- end }}
         </ul>
       </nav>

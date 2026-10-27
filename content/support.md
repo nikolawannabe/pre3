@@ -24,7 +24,7 @@ Fundraisers are also a great way for families to get to know each other outside 
 - **Restaurant takeovers**, where part of your bill supports Pre-3
 - **Bake sales and candy sales**
 
-Watch our [events](/events/) and [Facebook page](https://www.facebook.com/peninsulapre3) for the next one.
+Watch our [events]({{< relref "/events" >}}) and [Facebook page](https://www.facebook.com/peninsulapre3) for the next one.
 
 ## Where your support goes
 

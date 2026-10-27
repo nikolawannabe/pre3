@@ -8,8 +8,8 @@ nonprofit: Peninsula Pre-3 Cooperative is a 501(c)(3) nonprofit, run by a volunt
 columns:
   - heading: Explore
     links:
-      - { label: Classes and registration, url: /classes/ }
-      - { label: For families, url: /families/ }
-      - { label: Events, url: /events/ }
-      - { label: About us, url: /about/ }
-      - { label: Support Pre-3, url: /support/ }
+      - { label: Classes and registration, url: classes/ }
+      - { label: For families, url: families/ }
+      - { label: Events, url: events/ }
+      - { label: About us, url: about/ }
+      - { label: Support Pre-3, url: support/ }
