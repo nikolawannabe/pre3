@@ -6,9 +6,11 @@ teachers:
   people:
     - name: Tegan Glaude
       role: Children's teacher
+      photo: tegan-glaude.jpg   # cropped to the teacher from the old site's photo
       bio: Tegan came to Pre-3 as a parent in 2015 and stayed through 2022 with all three of her children, so she knows firsthand how much it helps with the ups and downs of early parenting. She studied Biology and the Program on the Environment at UW Seattle, and loves exploring the Peninsula's forests and beaches with her family.
     - name: Shelby Simmons
       role: Children's teacher
+      photo: shelby-simmons.jpg   # cropped to the teacher from the old site's photo
       bio: Shelby is a certified elementary teacher who has taught since 2016, in East Wenatchee and Port Angeles. She joined the co-op as a parent with her son before joining the teaching team. Her favorite part of teaching is celebrating each child's growth.
 
 # Parent educators lead the weekly grown-ups' discussion in Fall, Winter and Spring. New parent educators
