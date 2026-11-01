@@ -44,5 +44,6 @@ Watch our [events]({{< relref "/events" >}}) and [Facebook page](https://www.fac
 
 ## Thank you
 
-Thank you to the Benjamin N. Phillips Memorial Fund, and to every family, business and neighbor who has
+Thank you to the Benjamin N. Phillips Memorial Fund, the Albert Haller Foundation and Soroptimist
+International of Port Angeles for their grants, and to every family, business and neighbor who has
 supported Pre-3 over the last 50 years.
