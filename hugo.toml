@@ -7,6 +7,12 @@ buildFuture = true   # events are dated in the future; without this Hugo leaves 
 # Don't generate /tags/, /categories/ and their term pages
 disableKinds = ["taxonomy", "term"]
 
+# No RSS feeds: nobody subscribes to them, and the events feed would list the family-only events
+# that the site keeps off its public pages.
+[outputs]
+  home = ["html"]
+  section = ["html"]
+
 # The main menu. /branding/ (the style guide) is reachable but not listed.
 [[menu.main]]
   name = "Classes"

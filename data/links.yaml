@@ -1,0 +1,21 @@
+# Links to the co-op's own documents and pages, shown by {{< links "group" >}}. Edit them here, not in the pages.
+# note: optional, a few words shown after the link.
+# Drive files must be shared "Anyone with the link: Viewer" (not Editor), because this site is public.
+# From the parent educator's weekly emails, Fall 2026.
+
+handbook:   # on /families/, "Handbook and policies"
+  - label: Family Handbook
+    url: https://drive.google.com/file/d/1eplHeV29vXQmsoMNDUIPGba6UrZMVJ2j/view
+    note: how the co-op works, and what we ask of every family
+  - label: Illness Policy
+    url: https://drive.google.com/file/d/1WzRtRCNACi529g38Ynt-RShLP43Hluou/view
+  - label: Weather Policy
+    url: https://drive.google.com/file/d/1h2GMR0cE3RvsW4GfWHgOFOQwS2YZ6h10/view
+
+fun:        # on /families/, "Staying in touch"
+  - label: Pre-3 playlist on Spotify
+    url: https://open.spotify.com/playlist/11Wt1g92tkfOwPhjLU601N
+
+give:       # on /support/, "Other ways to give"
+  - label: Pre-3 wish list on Amazon
+    url: https://www.amazon.com/hz/wishlist/ls/28LY3CZ406H33

@@ -1,0 +1,6 @@
+{{- /* A list of links with a short note each, from one group in data/links.yaml. Usage: {{< links "handbook" >}} */ -}}
+<ul class="links__list">
+  {{- range index site.Data.links (.Get 0) }}
+    <li><a href="{{ .url }}">{{ .label }}</a>{{ with .note }}: {{ . }}{{ end }}</li>
+  {{- end }}
+</ul>

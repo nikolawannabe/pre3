@@ -1,2 +1,8 @@
-{{- /* Extra <head> tags (the theme includes this partial): the home-screen icon for phones. */ -}}
+{{- /*
+  Extra <head> tags (the theme includes this partial): the home-screen icon for phones, and a "noindex" on
+  event pages that are only for enrolled families, so search engines leave them out.
+*/ -}}
 <link rel="apple-touch-icon" href="{{ "images/logo/apple-touch-icon.png" | relURL }}">
+{{- if and .IsPage (eq .Section "events") (eq (partial "event-audience.html" .) "families") }}
+<meta name="robots" content="noindex">
+{{- end }}

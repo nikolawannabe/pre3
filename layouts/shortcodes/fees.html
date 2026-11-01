@@ -14,6 +14,10 @@
     <p>Tuition for this year is being updated. For current fees, contact our {{ $c.phone_label }} at
       <a href="mailto:{{ $c.email }}">{{ $c.email }}</a> or <a href="tel:{{ replaceRE `[^0-9]` "" $c.phone }}">{{ $c.phone }}</a>.</p>
   {{- end }}
+  {{- with $fees.how_to_pay_url }}
+  <p>Pay tuition in the <a href="{{ $c.jovial.family_portal }}">Family Portal on Jovial</a>. Here are
+    <a href="{{ . }}">step-by-step directions for paying tuition</a>.</p>
+  {{- end }}
   <p><strong>Tuition assistance</strong> is available. Fill out the
     <a href="{{ $fees.assistance_url }}">financial assistance application</a>, and let the {{ $c.phone_label }} know you've applied.</p>
 </div>

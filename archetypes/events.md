@@ -6,6 +6,9 @@ endTime: ""              # optional, e.g. "7:00 pm"
 # endDate: 2027-03-14    # optional, for an event over several days (then the times are left off)
 # allDay: true           # optional, to leave the time off a one-day event
 # tentative: true        # optional, tags the date "Tentative date" until it's settled
+audience: families       # "public" to list it on the home and events pages (fundraisers); "families" lists it
+                         # only on /families/ (parties, board meetings). Leave the street address out of
+                         # family events: give it in the class text groups instead.
 # decoration: holiday     # optional, a garland on its card and page: holiday, fall, spring or summer (data/event-decorations.yaml)
 location: ""
 description: ""          # one line, shown on the event cards

@@ -15,6 +15,9 @@
 /* "Tentative date" tag (partials/event-tentative.html), on cards and event pages */
 .event-tentative { display: inline-block; margin-left: 0.25rem; padding: 0.1rem 0.5rem; border-radius: 0.5rem; background-color: var(--brand-salmonberry); color: var(--ink); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; white-space: nowrap; }
 
+/* "For Pre-3 families" tag (partials/event-audience-tag.html), on events only for enrolled families */
+.event-audience { display: inline-block; margin-left: 0.25rem; padding: 0.1rem 0.5rem; border-radius: 0.5rem; background-color: var(--brand-lupine); color: var(--ink); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; white-space: nowrap; }
+
 /* A decorated event (data/event-decorations.yaml): its card gets a garland across the top and fades from the
    decoration's tint to white, so the text below sits on white. */
 .event-card--decorated { flex-wrap: wrap; row-gap: 0.75rem; background-image: linear-gradient(to bottom, var(--decoration-tint) 0, #fff 4.5rem); }

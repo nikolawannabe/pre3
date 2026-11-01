@@ -1,0 +1,13 @@
+{{- /*
+  The upcoming events for enrolled families only (audience "families" in their front matter), as cards.
+  These are kept off the home page and the public events page. Usage: {{< family-events >}}
+*/ -}}
+{{- $empty := "No family events on the calendar right now. Watch your class's text group for news." -}}
+{{- with partial "upcoming-events.html" "families" }}
+<div class="event-cards" data-empty-message="{{ $empty }}">
+  {{- range . }}{{ partial "event-card.html" . }}{{ end }}
+</div>
+{{ partial "hide-past-script.html" }}
+{{- else }}
+<p class="events-empty">{{ $empty }}</p>
+{{- end }}

@@ -2,7 +2,8 @@
 title: "Fall Family Welcome Night"
 date: 2026-09-03T17:30:00-07:00
 endTime: "7:00 pm"   # TODO: confirm the time
-location: First Baptist Church, 5th and Laurel, Port Angeles
+audience: families
+location: The Pre-3 classroom
 description: "Meet your teacher and the other families before the first day of Fall classes."
 ---
 

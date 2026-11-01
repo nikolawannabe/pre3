@@ -1,10 +1,11 @@
 {{- /*
-  The events page: upcoming events soonest first, then past events (newest first) folded away.
+  The events page: upcoming public events soonest first, then past ones (newest first) folded away.
+  Events only for enrolled families are listed on /families/ instead ({{< family-events >}}).
   Cards come from partials/event-card.html. Styles: assets/ananke/css/events.css.
 */ -}}
 {{ define "main" }}
-  {{- $upcoming := partial "upcoming-events.html" . }}
-  {{- $past := complement $upcoming (where site.RegularPages "Section" "events") }}
+  {{- $upcoming := partial "upcoming-events.html" "public" }}
+  {{- $past := complement $upcoming (partial "events-for.html" "public") }}
   <div class="page-content">
     {{ .Content }}
     {{- with $upcoming }}

@@ -1,0 +1,10 @@
+{{- /*
+  The events (content/events/) for one audience, "public" or "families" (partials/event-audience.html),
+  in no particular order. Takes the audience.
+*/ -}}
+{{- $audience := . -}}
+{{- $events := slice -}}
+{{- range where site.RegularPages "Section" "events" -}}
+  {{- if eq (partial "event-audience.html" .) $audience }}{{ $events = $events | append . }}{{ end -}}
+{{- end -}}
+{{- return $events -}}

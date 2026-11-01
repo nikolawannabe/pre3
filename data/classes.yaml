@@ -70,11 +70,15 @@ activities: [Music, Art, Social play, Dramatic play, Outdoor play, Science and s
 fees:
   registration: "$40 annual registration fee"   # TODO: yearly, non-refundable registration fee
   tuition: [{label: "Morning classes", amount: "$150"},{label: "Evening classes", amount: "$120"},]        # TODO: e.g. - { label: "Morning classes", amount: "$___ per term" }
-  assistance_url: https://drive.google.com/file/d/1y4kv9Xak5dQBYgvxJvuG7_1FqdLMLFWY/view?usp=drive_link
+  assistance_url: https://drive.google.com/file/d/1V_xC55a-NS91l0k4SCNFIQlUrDDEvkO4/view   # Fall 2026 form, from the parent educator's emails
+  how_to_pay_url: https://drive.google.com/file/d/1-V0OQBhXTRJPwy57P8UbiGyK2keXugqR/view   # step-by-step directions for paying tuition on Jovial
 
 # Forms every family needs before the first class
+# (shown on /classes/ and /families/ by {{< forms >}}; the note under the list is in layouts/shortcodes/forms.html)
 forms:
-  - label: Immunization form and exemption certificate (Washington Department of Health)
-    url: https://www.doh.wa.gov/CommunityandEnvironment/Schools/Immunization#cis
+  - label: Your child's immunization record (MyIR, Washington's immunization records site)
+    url: https://myirmobile.com/
+  - label: Certificate of Exemption, if your child is exempt (Washington Department of Health)
+    url: https://doh.wa.gov/sites/default/files/2025-07/348-106-CertificateofExemption.pdf
   - label: Safety video
     url: https://www.youtube.com/watch?v=6Y-3hSiz9Is

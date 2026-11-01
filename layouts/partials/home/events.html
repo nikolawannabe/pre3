@@ -1,8 +1,8 @@
 {{- /*
-  Home page: the next few events, soonest first. Takes the section heading. Shows nothing when no events
+  Home page: the next few public events, soonest first. Takes the section heading. Shows nothing when no events
   are coming up, so the page doesn't advertise an empty list.
 */ -}}
-{{- $upcoming := partial "upcoming-events.html" . -}}
+{{- $upcoming := partial "upcoming-events.html" "public" -}}
 {{- with first 3 $upcoming }}
 <section class="home-section">
   <h2 class="home-section__heading">{{ $ }}</h2>

@@ -1,0 +1,7 @@
+{{- /*
+  A "For Pre-3 families" tag on an event that's only for enrolled families (partials/event-audience.html).
+  Takes the event page; prints nothing for a public event. Styles: assets/ananke/css/events.css.
+*/ -}}
+{{- if eq (partial "event-audience.html" .) "families" -}}
+  <span class="event-audience">For Pre-3 families</span>
+{{- end -}}

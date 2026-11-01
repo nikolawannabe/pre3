@@ -1,0 +1,8 @@
+{{- /*
+  Who an event is for: "public" (anyone, such as a fundraiser) or "families" (enrolled Pre-3 families, such as
+  the holiday party or a board meeting). Takes the event page; returns the "audience" front matter.
+  An event without one counts as "families", so a new event is never advertised to the public by accident.
+*/ -}}
+{{- $audience := "families" -}}
+{{- if eq .Params.audience "public" }}{{ $audience = "public" }}{{ end -}}
+{{- return $audience -}}

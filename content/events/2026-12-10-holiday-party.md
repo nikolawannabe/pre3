@@ -4,7 +4,8 @@ date: 2026-12-10T00:00:00-08:00
 allDay: true        # TODO: add the time once it's set
 tentative: true     # TODO: remove once the date is confirmed
 decoration: holiday # snowflakes on its card and page (data/event-decorations.yaml)
-location: First Baptist Church (basement), 5th and Laurel, Port Angeles
+audience: families
+location: The church basement (details in your class's text group)
 description: "Come celebrate the season with your Pre-3 friends, big and small!"
 ---
 

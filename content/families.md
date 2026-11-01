@@ -21,6 +21,17 @@ educator. Topics include child development, everyday parenting challenges, and t
 resources our community has for young families. Parent education runs in Fall, Winter and Spring; there is no
 parent educator in Summer.
 
+This fall, for example, families talked about:
+
+- Learning through play, and the patterns ("schemas") in how toddlers play
+- Smoothing everyday transitions, with ideas from Positive Discipline
+- Helping little ones understand "no," with ideas from Conscious Discipline
+- Independent play, risky play, and what to say instead of "Be careful"
+- Body autonomy and consent
+- Potty training
+
+Families help choose the topics, so bring your questions.
+
 Parenting, especially for new parents, can feel isolating. Talking it through each week with others at the same
 stage is one of the best parts of Pre-3, and many families make lasting friendships here.
 
@@ -28,6 +39,14 @@ stage is one of the best parts of Pre-3, and many families make lasting friendsh
 We're welcoming new parent educators soon. Parent education is simply about learning together; there are no
 credits, grades or certificates.
 {{< /callout >}}
+
+## Family events
+
+Parties, family nights and board meetings are just for Pre-3 families, so we list them here rather than on our
+public [events]({{< relref "/events" >}}) page. Each fall, families also join a morning field trip to the pumpkin
+patch at Agnew Grocery.
+
+{{< family-events >}}
 
 ## Join the board
 
@@ -44,8 +63,12 @@ We currently have the following board member positions available for the upcomin
 - **Vice-Chair**: Supports the Chair in managing board operations and oversees specific initiatives
 - **Treasurer**: Manages the co-op's financial records, budget, and financial reporting
 - **Fundraising Chair**: Leads our fundraising efforts including grant writing, community events, and donor relations
+- **Member-at-Large**: Joins board meetings and decisions, and helps wherever the co-op needs it most <!-- TODO: confirm this description with the board -->
 
-These positions are great opportunities to contribute to the co-op while gaining experience in cooperative governance. Board members typically serve 1-2 year terms, with the option to renew.
+These positions are great opportunities to contribute to the co-op while gaining experience in cooperative governance. Training is provided. Board members typically serve 1-2 year terms, with the option to renew.
+
+The board meets one Monday evening most months, at 5:30 pm in the classroom, and every family is welcome to
+come. Upcoming meetings are under [Family events](#family-events).
 
 If you're interested in serving on the board or have questions about these roles, please [email us](mailto:peninsulaprethree@gmail.com).
 
@@ -54,6 +77,12 @@ If you're interested in serving on the board or have questions about these roles
 - **Text message groups:** each class has one, run by the teacher, for reminders and changes.
 - **The [Family Portal on Jovial](https://www.jovial.org/peninsulacoop/family):** your registration, payments and forms.
 - **[Facebook](https://www.facebook.com/peninsulapre3):** news, events and fundraisers.
+
+{{< links "fun" >}}
+
+## Handbook and policies
+
+{{< links "handbook" >}}
 
 ## Forms
 

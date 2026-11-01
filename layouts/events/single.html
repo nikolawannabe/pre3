@@ -6,13 +6,17 @@
   {{- $term := partial "term-for-date.html" .Date }}
   <div class="page-content">
     <div class="event-facts"{{ with $term }} style="{{ printf "--term: %s; --term-tint: %s" .color .tint | safeCSS }}"{{ end }}>
-      <p>{{ partial "icon.html" "calendar" }}<span>{{ partial "event-when.html" . }} {{ partial "event-tentative.html" . }}</span></p>
+      <p>{{ partial "icon.html" "calendar" }}<span>{{ partial "event-when.html" . }} {{ partial "event-tentative.html" . }} {{ partial "event-audience-tag.html" . }}</span></p>
       {{- with .Params.location }}
         <p>{{ partial "icon.html" "pin" }}<span>{{ . }}</span></p>
       {{- end }}
     </div>
     {{- with partial "event-decoration.html" . }}{{ partial "garland.html" (dict "decoration" . "count" 7 "class" "garland--page") }}{{ end }}
     {{ .Content }}
-    <p><a href="{{ "events/" | relURL }}">← All events</a></p>
+    {{- if eq (partial "event-audience.html" .) "families" }}
+      <p><a href="{{ "families/" | relURL }}#family-events">← Family events</a></p>
+    {{- else }}
+      <p><a href="{{ "events/" | relURL }}">← All events</a></p>
+    {{- end }}
   </div>
 {{ end }}

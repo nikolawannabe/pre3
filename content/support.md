@@ -11,10 +11,17 @@ tuition assistance, so no family has to miss out because of cost.
 
 Every gift helps, and Pre-3 is a 501(c)(3) nonprofit, so your donation may be tax-deductible.
 
+{{< buttons "Donate online|https://secure.givelively.org/donate/peninsula-pre-three-cooperative" >}}
+
+Online gifts go through Give Lively, straight to Pre-3's bank account.
+
 {{< callout >}}
 **By mail:** send a check made out to Peninsula Pre-3 Cooperative to P.O. Box 876, Port Angeles, WA 98362.
-<!-- TODO: an online donation link, if Pre-3 sets one up -->
 {{< /callout >}}
+
+## Other ways to give
+
+{{< links "give" >}}
 
 ## Come to a fundraiser
 

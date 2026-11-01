@@ -1,4 +1,4 @@
 ---
 title: "Events"
-description: "Family nights, fundraisers and get-togethers. Everyone's welcome."
+description: "Fundraisers and community events. Everyone's welcome."
 ---
