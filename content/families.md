@@ -63,7 +63,7 @@ We currently have the following board member positions available for the upcomin
 - **Vice-Chair**: Supports the Chair in managing board operations and oversees specific initiatives
 - **Treasurer**: Manages the co-op's financial records, budget, and financial reporting
 - **Fundraising Chair**: Leads our fundraising efforts including grant writing, community events, and donor relations
-- **Member-at-Large**: Joins board meetings and decisions, and helps wherever the co-op needs it most <!-- TODO: confirm this description with the board -->
+- **Member-at-Large**: Joins board meetings and decisions, and helps wherever the co-op needs it most
 
 These positions are great opportunities to contribute to the co-op while gaining experience in cooperative governance. Training is provided. Board members typically serve 1-2 year terms, with the option to renew.
 
