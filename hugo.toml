@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'   # TODO: the Pre-3 domain, once DNS is set up
+baseURL = 'https://peninsulapre3.org/'   # the live build gets this from the Pages settings (see hugo.yaml)
 languageCode = 'en-us'
 title = 'Peninsula Pre-3 Cooperative Preschool'
 theme = 'ananke'

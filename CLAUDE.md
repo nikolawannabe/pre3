@@ -2,6 +2,8 @@
 
 Hugo site (Ananke theme) for Peninsula Pre-3 Cooperative Preschool, modeled on the PCYO site (`~/pcyo`).
 Pushing to `main` will deploy to GitHub Pages through a GitHub Action (`.github/workflows/hugo.yaml`).
+The live site is https://peninsulapre3.org/ (custom domain since 2026-11-23, registered at Namecheap).
+The old `nikolawannabe.github.io/pre3/` address redirects there.
 
 Pre-3 is **no longer connected to Peninsula College**: no college partnership, college credits, college
 calendar, or college faculty anywhere on the site.
@@ -24,9 +26,10 @@ All generated code must be human readable and editable, and properly designed wi
 - Name values instead of using magic numbers, keep one source of truth for each value, and comment the "why".
 - Prefer small, single-purpose files with a short header comment saying what they do and what they take.
 - Use specific class names (for example `brand-term__badge`) and check the site for existing uses first.
-- **Internal links** must work when the site is served under a subpath (e.g. `nikolawannabe.github.io/pre3/`):
-  write them without a leading slash (`classes/`) and pass them through `relURL` in templates, or use
-  `{{< relref "/events" >}}` in markdown. A leading `/` skips the subpath.
+- **Internal links:** the site is served from the domain root now, but keep links working under a subpath
+  too, so it can be previewed or moved without edits: write them without a leading slash (`classes/`) and
+  pass them through `relURL` in templates, or use `{{< relref "/events" >}}` in markdown. A leading `/`
+  skips any subpath.
 
 ## Brand and accessibility
 
