@@ -48,3 +48,7 @@ logos:
     name: Full logo, white
     use: On the deep shades or photos.
     dark: true
+  - file: images/logo/favicon.png
+    name: Small logo
+    use: The site's browser-tab icon (favicon), 64 pixels square. For places too small for the full logo's lettering.
+    small: true   # shown at its real size, not stretched (branding.css)

@@ -47,6 +47,8 @@
 .brand-logo figcaption { margin-top: 0.75rem; font-size: 0.9rem; }
 .brand-logo--dark { background-color: var(--brand-glacier-deep); color: #fff; }
 .brand-logo--dark a { color: #fff; }
+/* A small logo (the 64 × 64 favicon) at its real size: stretching it to the full logos' width would blur it */
+.brand-logo--small img { width: 64px; }
 
 /* Terms. Each card sets --term and --term-tint. */
 .brand-terms { display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 1.25rem; }

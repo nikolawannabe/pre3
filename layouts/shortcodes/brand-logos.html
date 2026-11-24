@@ -1,6 +1,7 @@
 {{- /*
   Style guide section: the logo files, each on a background it suits, with a download link.
-  Usage: {{< brand-logos >}}. Logos come from data/brand.yaml.
+  Usage: {{< brand-logos >}}. Logos come from data/brand.yaml ("dark: true" for a dark card,
+  "small: true" to show a small logo at its real size).
 */ -}}
 <section class="brand-section">
   <h2>Logo</h2>
@@ -10,7 +11,7 @@
   </p>
   <div class="brand-logos">
     {{- range site.Data.brand.logos }}
-      <figure class="brand-logo{{ if .dark }} brand-logo--dark{{ end }}">
+      <figure class="brand-logo{{ if .dark }} brand-logo--dark{{ end }}{{ if .small }} brand-logo--small{{ end }}">
         <img src="{{ .file | relURL }}" alt="Peninsula Pre-3 Cooperative Preschool logo, {{ .name }}" loading="lazy">
         <figcaption><strong>{{ .name }}</strong><br>{{ .use }}<br><a href="{{ .file | relURL }}" download>Download PNG</a></figcaption>
       </figure>
