@@ -18,7 +18,7 @@ terms:
     parent_ed: true
   - id: winter
     name: Winter Term
-    start: ""          # TODO
+    start: "2027-01-12"          # TODO
     end: ""
     color: "#2b5d87"
     tint: "#d3e5f2"
